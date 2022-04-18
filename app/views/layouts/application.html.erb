@@ -5,12 +5,27 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <link href="http://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <% flash.each do |type, msg| %>
+      <% if type == 'alert' %>
+      <div class="flash-msg alert">
+        <%= msg %>
+      </div>
+      <% else %>
+      <div class="flash-msg">
+        <%= msg %>
+      </div>
+      <% end %>
+
+    <% end %>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

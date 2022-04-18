@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'mixins';
+
+.splash {
+  @include display(column, space-between, center);
+
+  > div:first-of-type {
+    @include display(column, center, center);
+
+    margin: 0 auto;
+
+    img {
+      margin: 0 auto;
+      width: 107%;
+    }
+  }
+
+  > div:last-of-type {
+    @include display(column, center, center);
+
+    width: 100%;
+    padding: 10px;
+    margin-top: 40px;
+
+    > a {
+      @include button-1;
+
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-family: $font-1;
+      font-size: 20px;
+
+      &:last-of-type {
+        background: transparent;
+        color: $primary-color-1;
+        margin-top: 0;
+      }
+    }
+  }
+}

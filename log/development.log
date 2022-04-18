@@ -1,0 +1,845 @@
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE DATABASE "budgit_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "budgit_development" ENCODING = 'unicode'[0m
+  [1m[35m (371.4ms)[0m  [1m[35mCREATE DATABASE "budgit_development" ENCODING = 'unicode'[0m
+  [1m[35m (125.7ms)[0m  [1m[35mCREATE DATABASE "budgit_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2022-04-18 14:21:29 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/anselemcodes/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/anselemcodes/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.0ms | Allocations: 831)
+Completed 200 OK in 34ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 7628)
+
+
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20220418133856)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220418133856"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-18 13:39:54.952503"], ["updated_at", "2022-04-18 13:39:54.952503"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-04-18 14:45:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 897)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 42.5ms | Allocations: 9139)
+  Rendered layout layouts/application.html.erb (Duration: 393.1ms | Allocations: 98539)
+Completed 200 OK in 439ms (Views: 401.4ms | ActiveRecord: 5.0ms | Allocations: 111565)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-18 14:45:08 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.5ms | Allocations: 241)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 220)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2205)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 4464)
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 6088)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-18 14:45:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 124)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 3067)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 3932)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (37.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_development"[0m
+  [1m[35m (19.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_test"[0m
+  [1m[35m (79.0ms)[0m  [1m[35mCREATE DATABASE "budgit_development" ENCODING = 'unicode'[0m
+  [1m[35m (109.1ms)[0m  [1m[35mCREATE DATABASE "budgit_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220418133856)[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-18 13:53:29.375882"], ["updated_at", "2022-04-18 13:53:29.375882"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80373a0068f995e6fb49a8cf72141447975a7e9c"], ["created_at", "2022-04-18 13:53:29.395475"], ["updated_at", "2022-04-18 13:53:29.395475"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220418133856)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-18 13:53:29.479866"], ["updated_at", "2022-04-18 13:53:29.479866"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-04-18 13:53:29.489769"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80373a0068f995e6fb49a8cf72141447975a7e9c"], ["created_at", "2022-04-18 13:53:29.497086"], ["updated_at", "2022-04-18 13:53:29.497086"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220418135122)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "full_name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (25.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_development"[0m
+  [1m[35m (33.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_test"[0m
+  [1m[35m (87.0ms)[0m  [1m[35mCREATE DATABASE "budgit_development" ENCODING = 'unicode'[0m
+  [1m[35m (107.0ms)[0m  [1m[35mCREATE DATABASE "budgit_test" ENCODING = 'unicode'[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220418135122)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "full_name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220418135122"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20220418135812)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp(6)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp(6)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220418135812"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-18 13:58:56.590735"], ["updated_at", "2022-04-18 13:58:56.590735"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-18 15:03:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 580)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2097)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 15745)
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 0.0ms | Allocations: 19534)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-18 15:03:09 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.3ms | Allocations: 233)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 35.2ms | Allocations: 5949)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 6049)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms | Allocations: 7605)
+
+
+  
+ActionView::Template::Error (undefined method `full_name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>):
+    4:   <%= render "devise/shared/error_messages", resource: resource %>
+    5: 
+    6:   <div class="field">
+    7:     <%= f.text_field :full_name, autofocus: true, autocomplete: "full_name", placeholder: "Full name" %>
+    8:   </div>
+    9: 
+   10:   <div class="field">
+  
+app/views/devise/registrations/new.html.erb:7
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-18 15:03:40 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 15.7ms | Allocations: 233)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 47.1ms | Allocations: 4439)
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | Allocations: 4528)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms | Allocations: 6183)
+
+
+  
+ActionView::Template::Error (undefined method `full_name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>):
+    4:   <%= render "devise/shared/error_messages", resource: resource %>
+    5: 
+    6:   <div class="field">
+    7:     <%= f.text_field :full_name, autofocus: true, placeholder: "Full name" %>
+    8:   </div>
+    9: 
+   10:   <div class="field">
+  
+app/views/devise/registrations/new.html.erb:7
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-18 15:03:50 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 286)
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 733)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.2ms | Allocations: 4120)
+  Rendered layout layouts/application.html.erb (Duration: 121.4ms | Allocations: 37878)
+Completed 200 OK in 169ms (Views: 129.3ms | ActiveRecord: 5.9ms | Allocations: 51118)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-18 15:04:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 422)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.0ms | Allocations: 4027)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 6270)
+Completed 200 OK in 44ms (Views: 38.1ms | ActiveRecord: 0.0ms | Allocations: 8387)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-18 15:05:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.1ms | Allocations: 568)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1426)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 4012)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 5768)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-18 15:06:17 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 233)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1420)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 3674)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 5120)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-18 15:21:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 286)
+  Rendered devise/shared/_links.html.erb (Duration: 3.7ms | Allocations: 733)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 4120)
+  Rendered layout layouts/application.html.erb (Duration: 117.5ms | Allocations: 37878)
+Completed 200 OK in 164ms (Views: 127.9ms | ActiveRecord: 4.6ms | Allocations: 51118)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:21:10 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 5699)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 5800)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms | Allocations: 6881)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x0000000000ca08>
+Did you mean?  rescue):
+    1: <h2>Splash screen</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    4:   <%= render "devise/shared/error_messages", resource: resource %>
+    5: 
+    6:   <div class="field">
+  
+app/views/splashs/index.html.erb:3
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:22:17 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 149)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 3089)
+Completed 200 OK in 55ms (Views: 50.2ms | ActiveRecord: 0.0ms | Allocations: 4269)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:24:39 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 3202)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 4384)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-18 15:24:42 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 26.0ms | Allocations: 825)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.5ms | Allocations: 1809)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 4067)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 6226)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-18 15:24:51 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.9ms | Allocations: 233)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1422)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 3676)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 5109)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:29:43 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 75.4ms | Allocations: 22548)
+  Rendered layout layouts/application.html.erb (Duration: 96.0ms | Allocations: 25234)
+Completed 200 OK in 103ms (Views: 102.0ms | Allocations: 26396)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:32:15 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3090)
+Completed 200 OK in 20ms (Views: 18.9ms | Allocations: 3430)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:33:56 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 3664)
+Completed 200 OK in 30ms (Views: 25.2ms | Allocations: 4810)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:42:30 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | Allocations: 9968)
+Completed 500 Internal Server Error in 69ms (Allocations: 10278)
+
+
+  
+LoadError (cannot load such file -- sassc):
+  
+app/views/layouts/application.html.erb:9
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:42:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 164.8ms | Allocations: 32653)
+  Rendered layout layouts/application.html.erb (Duration: 165.1ms | Allocations: 32762)
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 0.0ms | Allocations: 38501)
+
+
+  
+ActionView::Template::Error (Error: Undefined variable: "$neutral-color-1".
+        on line 37:15 of app/assets/stylesheets/application.scss
+>>   background: $neutral-color-1;
+
+   --------------^
+):
+  
+app/assets/stylesheets/application.scss:37
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:43:40 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 151.1ms | Allocations: 27431)
+  Rendered layout layouts/application.html.erb (Duration: 186.3ms | Allocations: 41643)
+Completed 200 OK in 193ms (Views: 190.5ms | ActiveRecord: 0.0ms | Allocations: 42045)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:45:04 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 606)
+  Rendered layout layouts/application.html.erb (Duration: 112.9ms | Allocations: 8278)
+Completed 200 OK in 118ms (Views: 115.3ms | ActiveRecord: 0.0ms | Allocations: 8605)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:45:44 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 87.6ms | Allocations: 7441)
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.0ms | Allocations: 7768)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:50:19 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 976)
+  Rendered layout layouts/application.html.erb (Duration: 162.7ms | Allocations: 11126)
+Completed 200 OK in 175ms (Views: 169.8ms | Allocations: 12267)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:51:20 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 78.5ms | Allocations: 9739)
+Completed 200 OK in 82ms (Views: 80.0ms | Allocations: 10079)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:51:54 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 89.1ms | Allocations: 7396)
+Completed 200 OK in 95ms (Views: 91.5ms | Allocations: 7726)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:55:28 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 115.6ms | Allocations: 10091)
+Completed 200 OK in 120ms (Views: 118.3ms | Allocations: 10418)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:56:52 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 118.8ms | Allocations: 10236)
+Completed 200 OK in 125ms (Views: 122.9ms | Allocations: 10560)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:58:35 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 133.7ms | Allocations: 10381)
+Completed 200 OK in 136ms (Views: 135.2ms | Allocations: 10705)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:58:45 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 605)
+  Rendered layout layouts/application.html.erb (Duration: 104.7ms | Allocations: 9918)
+Completed 200 OK in 108ms (Views: 106.8ms | Allocations: 10242)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-8bd7fc1a983a677de8ae79f44089647b66b5eb49144f04101936bffbe04601a5.css"):
+  
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:58:54 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 627)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 3129)
+Completed 200 OK in 30ms (Views: 27.9ms | Allocations: 3491)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:59:17 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 92.7ms | Allocations: 10991)
+Completed 200 OK in 94ms (Views: 93.7ms | Allocations: 11315)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-6dc2e5553ddb014c750d2e081bcfe3fd3890dd4d1613a5b744e9dedd60deb201.css"):
+  
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:59:21 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3077)
+Completed 200 OK in 14ms (Views: 13.4ms | Allocations: 3401)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:01:05 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 111.3ms | Allocations: 7312)
+Completed 500 Internal Server Error in 116ms (Allocations: 7607)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "   }": expected "}", was "> "
+        on line 16:5 of app/assets/stylesheets/_splash.scss
+>>    }
+
+   ----^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/_splash.scss:16
+app/views/layouts/application.html.erb:9
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:01:15 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 606)
+  Rendered layout layouts/application.html.erb (Duration: 97.3ms | Allocations: 10361)
+Completed 200 OK in 99ms (Views: 98.2ms | Allocations: 10685)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:02:41 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 103.1ms | Allocations: 10365)
+Completed 200 OK in 106ms (Views: 104.5ms | Allocations: 10689)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:04:23 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 98.9ms | Allocations: 11345)
+Completed 200 OK in 102ms (Views: 101.2ms | Allocations: 11669)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:04:48 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 111.4ms | Allocations: 10884)
+Completed 200 OK in 115ms (Views: 114.1ms | Allocations: 11208)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:05:21 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 123.0ms | Allocations: 9905)
+Completed 200 OK in 126ms (Views: 124.4ms | Allocations: 10229)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:05:50 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 112.8ms | Allocations: 9941)
+Completed 200 OK in 117ms (Views: 114.9ms | Allocations: 10265)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:06:18 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 104.0ms | Allocations: 9935)
+Completed 200 OK in 108ms (Views: 106.3ms | Allocations: 10259)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:06:44 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 129.1ms | Allocations: 11247)
+Completed 200 OK in 132ms (Views: 130.4ms | Allocations: 11571)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:07:16 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 115.1ms | Allocations: 11299)
+Completed 200 OK in 119ms (Views: 116.4ms | Allocations: 11623)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:07:30 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3027)
+Completed 200 OK in 15ms (Views: 14.1ms | Allocations: 3351)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:07:39 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 133.2ms | Allocations: 12311)
+Completed 200 OK in 137ms (Views: 135.2ms | Allocations: 12635)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:08:03 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 606)
+  Rendered layout layouts/application.html.erb (Duration: 138.9ms | Allocations: 10416)
+Completed 200 OK in 144ms (Views: 142.2ms | Allocations: 10740)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:08:18 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 121.1ms | Allocations: 11262)
+Completed 200 OK in 124ms (Views: 122.4ms | Allocations: 11586)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:08:45 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 113.8ms | Allocations: 10378)
+Completed 200 OK in 118ms (Views: 116.4ms | Allocations: 10702)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:09:16 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 604)
+  Rendered layout layouts/application.html.erb (Duration: 110.1ms | Allocations: 10411)
+Completed 200 OK in 114ms (Views: 111.3ms | Allocations: 10735)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:10:21 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 134.9ms | Allocations: 9948)
+Completed 200 OK in 138ms (Views: 136.8ms | Allocations: 10272)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:11:06 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 979)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 3909)
+Completed 200 OK in 37ms (Views: 30.6ms | Allocations: 5049)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:24:07 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 143.1ms | Allocations: 11991)
+Completed 200 OK in 147ms (Views: 145.0ms | Allocations: 12331)
+
+
+Started GET "/app/assets/fonts/Proxima-Font.otf" for 127.0.0.1 at 2022-04-18 16:24:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Proxima-Font.otf"):
+  
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:26:03 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 118.4ms | Allocations: 11866)
+Completed 200 OK in 125ms (Views: 123.3ms | Allocations: 12190)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:26:33 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 606)
+  Rendered layout layouts/application.html.erb (Duration: 145.2ms | Allocations: 11408)
+Completed 200 OK in 148ms (Views: 146.6ms | Allocations: 11732)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:27:01 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 605)
+  Rendered layout layouts/application.html.erb (Duration: 128.7ms | Allocations: 11286)
+Completed 200 OK in 132ms (Views: 130.0ms | Allocations: 11610)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:28:00 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 102.2ms | Allocations: 11314)
+Completed 200 OK in 106ms (Views: 103.9ms | Allocations: 11638)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:28:51 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 100.1ms | Allocations: 11390)
+Completed 200 OK in 102ms (Views: 101.0ms | Allocations: 11714)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:29:47 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 605)
+  Rendered layout layouts/application.html.erb (Duration: 80.8ms | Allocations: 10958)
+Completed 200 OK in 82ms (Views: 81.6ms | Allocations: 11282)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:29:59 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 605)
+  Rendered layout layouts/application.html.erb (Duration: 110.2ms | Allocations: 9990)
+Completed 200 OK in 114ms (Views: 112.0ms | Allocations: 10314)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:30:35 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 81.8ms | Allocations: 9983)
+Completed 200 OK in 86ms (Views: 83.9ms | Allocations: 10307)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:30:58 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 128.2ms | Allocations: 11817)
+Completed 200 OK in 138ms (Views: 135.9ms | Allocations: 12141)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:31:11 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 3077)
+Completed 200 OK in 40ms (Views: 37.7ms | Allocations: 3401)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:32:28 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 979)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3929)
+Completed 200 OK in 40ms (Views: 30.9ms | Allocations: 5074)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-18 16:32:53 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 896)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.2ms | Allocations: 2986)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 5475)
+Completed 200 OK in 128ms (Views: 34.6ms | ActiveRecord: 36.6ms | Allocations: 16713)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-18 16:37:41 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 241)
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 224)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1730)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 4230)
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 5829)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-18 16:46:37 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 170)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 735)
+  Rendered layout layouts/application.html.erb (Duration: 156.4ms | Allocations: 23329)
+Completed 200 OK in 196ms (Views: 160.2ms | ActiveRecord: 11.6ms | Allocations: 29247)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-18 16:46:37 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 712)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 14408)
+Completed 200 OK in 66ms (Views: 38.0ms | ActiveRecord: 13.0ms | Allocations: 18409)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:46:43 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 784)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3362)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 4260)
+
+

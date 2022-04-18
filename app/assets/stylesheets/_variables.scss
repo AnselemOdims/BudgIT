@@ -1,0 +1,43 @@
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
+
+$primary-color-1: #3778c2;
+$primary-color-2: #e0feff;
+
+$accent-color-1: #5fb523;
+$accent-color-2: #f5eec2;
+
+$neutral-color-1: #434b54;
+$neutral-color-2: #e4e4e0;
+
+/* Font size stack */
+$font-size: (
+  "micro": 14px,
+  "mini": 18px,
+  "smallest": 20px,
+  "smaller":  22px,
+  "small": 24px,
+  "medium": 26px,
+  "large": 40px,
+  "larger": 48px,
+  "largest": 56px,
+);
+
+/* Font Weights Stack */
+$font-weights: (
+  "normal": 400,
+  "medium": 500,
+  "extra-medium": 600,
+  "bold": 700,
+  "bolder": 800,
+);
+
+$shadow-1: rgba(0, 0, 0, 0.25) 0 25px 50px -12px;
+$shadow-2: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+$shadow-3: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+
+$font-1: 'Proxima Nova', sans-serif;
+
+@font-face {
+  font-family: 'Proxima';
+  src: url('/app/assets/fonts/Proxima-Font.otf');
+}
