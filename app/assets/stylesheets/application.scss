@@ -14,11 +14,11 @@
  *= require_self
  */
 
- @import 'normalize';
- @import 'variables';
- @import 'mixins';
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
 
- /* General page settings */
+/* General page settings */
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -51,10 +51,6 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: #333;
-}
-
-main {
-
 }
 
 .flash-msg {
