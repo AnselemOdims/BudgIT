@@ -1,4 +1,9 @@
-<h2>Splash screen</h2>
-
-
-<p> Welcome to my BudgIT app! </p>
+<div class="splash">
+  <div>
+    <%= image_tag "budgit.gif", class: 'user_image' %>
+  </div>
+  <div>
+    <%= link_to "LOG IN", new_user_session_path %>
+    <%= link_to "SIGN UP", new_user_registration_path %>
+  </div>
+</div>

@@ -290,3 +290,516 @@ Processing by SplashsController#index as HTML
 Completed 200 OK in 55ms (Views: 50.2ms | ActiveRecord: 0.0ms | Allocations: 4269)
 
 
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:24:39 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 3202)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 4384)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-18 15:24:42 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 26.0ms | Allocations: 825)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.5ms | Allocations: 1809)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 4067)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 6226)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-18 15:24:51 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.9ms | Allocations: 233)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1422)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 3676)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 5109)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:29:43 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 75.4ms | Allocations: 22548)
+  Rendered layout layouts/application.html.erb (Duration: 96.0ms | Allocations: 25234)
+Completed 200 OK in 103ms (Views: 102.0ms | Allocations: 26396)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:32:15 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3090)
+Completed 200 OK in 20ms (Views: 18.9ms | Allocations: 3430)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:33:56 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 3664)
+Completed 200 OK in 30ms (Views: 25.2ms | Allocations: 4810)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:42:30 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | Allocations: 9968)
+Completed 500 Internal Server Error in 69ms (Allocations: 10278)
+
+
+  
+LoadError (cannot load such file -- sassc):
+  
+app/views/layouts/application.html.erb:9
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:42:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 164.8ms | Allocations: 32653)
+  Rendered layout layouts/application.html.erb (Duration: 165.1ms | Allocations: 32762)
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 0.0ms | Allocations: 38501)
+
+
+  
+ActionView::Template::Error (Error: Undefined variable: "$neutral-color-1".
+        on line 37:15 of app/assets/stylesheets/application.scss
+>>   background: $neutral-color-1;
+
+   --------------^
+):
+  
+app/assets/stylesheets/application.scss:37
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:43:40 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 151.1ms | Allocations: 27431)
+  Rendered layout layouts/application.html.erb (Duration: 186.3ms | Allocations: 41643)
+Completed 200 OK in 193ms (Views: 190.5ms | ActiveRecord: 0.0ms | Allocations: 42045)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:45:04 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 606)
+  Rendered layout layouts/application.html.erb (Duration: 112.9ms | Allocations: 8278)
+Completed 200 OK in 118ms (Views: 115.3ms | ActiveRecord: 0.0ms | Allocations: 8605)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:45:44 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 87.6ms | Allocations: 7441)
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.0ms | Allocations: 7768)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:50:19 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 976)
+  Rendered layout layouts/application.html.erb (Duration: 162.7ms | Allocations: 11126)
+Completed 200 OK in 175ms (Views: 169.8ms | Allocations: 12267)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:51:20 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 78.5ms | Allocations: 9739)
+Completed 200 OK in 82ms (Views: 80.0ms | Allocations: 10079)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:51:54 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 89.1ms | Allocations: 7396)
+Completed 200 OK in 95ms (Views: 91.5ms | Allocations: 7726)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:55:28 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 115.6ms | Allocations: 10091)
+Completed 200 OK in 120ms (Views: 118.3ms | Allocations: 10418)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:56:52 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 118.8ms | Allocations: 10236)
+Completed 200 OK in 125ms (Views: 122.9ms | Allocations: 10560)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:58:35 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 133.7ms | Allocations: 10381)
+Completed 200 OK in 136ms (Views: 135.2ms | Allocations: 10705)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:58:45 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 605)
+  Rendered layout layouts/application.html.erb (Duration: 104.7ms | Allocations: 9918)
+Completed 200 OK in 108ms (Views: 106.8ms | Allocations: 10242)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-8bd7fc1a983a677de8ae79f44089647b66b5eb49144f04101936bffbe04601a5.css"):
+  
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:58:54 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 627)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 3129)
+Completed 200 OK in 30ms (Views: 27.9ms | Allocations: 3491)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:59:17 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 92.7ms | Allocations: 10991)
+Completed 200 OK in 94ms (Views: 93.7ms | Allocations: 11315)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-6dc2e5553ddb014c750d2e081bcfe3fd3890dd4d1613a5b744e9dedd60deb201.css"):
+  
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 15:59:21 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3077)
+Completed 200 OK in 14ms (Views: 13.4ms | Allocations: 3401)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:01:05 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 111.3ms | Allocations: 7312)
+Completed 500 Internal Server Error in 116ms (Allocations: 7607)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "   }": expected "}", was "> "
+        on line 16:5 of app/assets/stylesheets/_splash.scss
+>>    }
+
+   ----^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/_splash.scss:16
+app/views/layouts/application.html.erb:9
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:01:15 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 606)
+  Rendered layout layouts/application.html.erb (Duration: 97.3ms | Allocations: 10361)
+Completed 200 OK in 99ms (Views: 98.2ms | Allocations: 10685)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:02:41 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 103.1ms | Allocations: 10365)
+Completed 200 OK in 106ms (Views: 104.5ms | Allocations: 10689)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:04:23 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 98.9ms | Allocations: 11345)
+Completed 200 OK in 102ms (Views: 101.2ms | Allocations: 11669)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:04:48 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 111.4ms | Allocations: 10884)
+Completed 200 OK in 115ms (Views: 114.1ms | Allocations: 11208)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:05:21 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 123.0ms | Allocations: 9905)
+Completed 200 OK in 126ms (Views: 124.4ms | Allocations: 10229)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:05:50 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 112.8ms | Allocations: 9941)
+Completed 200 OK in 117ms (Views: 114.9ms | Allocations: 10265)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:06:18 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 104.0ms | Allocations: 9935)
+Completed 200 OK in 108ms (Views: 106.3ms | Allocations: 10259)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:06:44 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 129.1ms | Allocations: 11247)
+Completed 200 OK in 132ms (Views: 130.4ms | Allocations: 11571)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:07:16 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 115.1ms | Allocations: 11299)
+Completed 200 OK in 119ms (Views: 116.4ms | Allocations: 11623)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:07:30 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3027)
+Completed 200 OK in 15ms (Views: 14.1ms | Allocations: 3351)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:07:39 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 133.2ms | Allocations: 12311)
+Completed 200 OK in 137ms (Views: 135.2ms | Allocations: 12635)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:08:03 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 606)
+  Rendered layout layouts/application.html.erb (Duration: 138.9ms | Allocations: 10416)
+Completed 200 OK in 144ms (Views: 142.2ms | Allocations: 10740)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:08:18 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 121.1ms | Allocations: 11262)
+Completed 200 OK in 124ms (Views: 122.4ms | Allocations: 11586)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:08:45 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 113.8ms | Allocations: 10378)
+Completed 200 OK in 118ms (Views: 116.4ms | Allocations: 10702)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:09:16 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 604)
+  Rendered layout layouts/application.html.erb (Duration: 110.1ms | Allocations: 10411)
+Completed 200 OK in 114ms (Views: 111.3ms | Allocations: 10735)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:10:21 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 134.9ms | Allocations: 9948)
+Completed 200 OK in 138ms (Views: 136.8ms | Allocations: 10272)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:11:06 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 979)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 3909)
+Completed 200 OK in 37ms (Views: 30.6ms | Allocations: 5049)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:24:07 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 143.1ms | Allocations: 11991)
+Completed 200 OK in 147ms (Views: 145.0ms | Allocations: 12331)
+
+
+Started GET "/app/assets/fonts/Proxima-Font.otf" for 127.0.0.1 at 2022-04-18 16:24:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Proxima-Font.otf"):
+  
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:26:03 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 118.4ms | Allocations: 11866)
+Completed 200 OK in 125ms (Views: 123.3ms | Allocations: 12190)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:26:33 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 606)
+  Rendered layout layouts/application.html.erb (Duration: 145.2ms | Allocations: 11408)
+Completed 200 OK in 148ms (Views: 146.6ms | Allocations: 11732)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:27:01 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 605)
+  Rendered layout layouts/application.html.erb (Duration: 128.7ms | Allocations: 11286)
+Completed 200 OK in 132ms (Views: 130.0ms | Allocations: 11610)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:28:00 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 102.2ms | Allocations: 11314)
+Completed 200 OK in 106ms (Views: 103.9ms | Allocations: 11638)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:28:51 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 100.1ms | Allocations: 11390)
+Completed 200 OK in 102ms (Views: 101.0ms | Allocations: 11714)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:29:47 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 605)
+  Rendered layout layouts/application.html.erb (Duration: 80.8ms | Allocations: 10958)
+Completed 200 OK in 82ms (Views: 81.6ms | Allocations: 11282)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:29:59 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 605)
+  Rendered layout layouts/application.html.erb (Duration: 110.2ms | Allocations: 9990)
+Completed 200 OK in 114ms (Views: 112.0ms | Allocations: 10314)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:30:35 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 81.8ms | Allocations: 9983)
+Completed 200 OK in 86ms (Views: 83.9ms | Allocations: 10307)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:30:58 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 128.2ms | Allocations: 11817)
+Completed 200 OK in 138ms (Views: 135.9ms | Allocations: 12141)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:31:11 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 603)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 3077)
+Completed 200 OK in 40ms (Views: 37.7ms | Allocations: 3401)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-04-18 16:32:28 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 979)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3929)
+Completed 200 OK in 40ms (Views: 30.9ms | Allocations: 5074)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-18 16:32:53 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 896)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.2ms | Allocations: 2986)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 5475)
+Completed 200 OK in 128ms (Views: 34.6ms | ActiveRecord: 36.6ms | Allocations: 16713)
+
+
