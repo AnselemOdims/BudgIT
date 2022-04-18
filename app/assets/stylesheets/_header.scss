@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+
+header {
+  @include display(row, space-between, center);
+
+  background: $primary-color-1;
+  padding: 10px;
+
+  > div:nth-of-type(1) {
+    > a {
+      img {
+        transform: rotate(180deg);
+        width: 35px
+      }
+    }
+  }
+  > div:nth-of-type(2) {
+    span {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: $font-1
+    }
+  }
+}

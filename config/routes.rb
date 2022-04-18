@@ -9,8 +9,7 @@ Rails.application.routes.draw do
         get '/users/sign_out' => 'devise/sessions#destroy'
       end
       unauthenticated :user do
-        root :to => "devise/sessions#new", as: :unauthenticated_root
+        root :to => "splashs#index", as: :unauthenticated_root
       end
     end
-    get '/splash' => 'splashs#index'
 end
