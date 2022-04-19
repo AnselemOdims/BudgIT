@@ -8410,3 +8410,150 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 1.0ms | Allocations: 4661)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:18:01 +0100
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 1.5ms | Allocations: 297)
+  Rendered shared/_header.html.erb (Duration: 9.5ms | Allocations: 1424)
+  [1m[36mCategory Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 4.5ms | Allocations: 146)
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:7
+  Rendered categories/index.html.erb within layouts/application (Duration: 34.4ms | Allocations: 3322)
+  Rendered layout layouts/application.html.erb (Duration: 280.1ms | Allocations: 18349)
+Completed 200 OK in 293ms (Views: 286.9ms | ActiveRecord: 2.1ms | Allocations: 19501)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 15:18:11 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered shared/_header.html.erb (Duration: 11.4ms | Allocations: 1211)
+  Rendered categories/new.html.erb within layouts/application (Duration: 22.8ms | Allocations: 2366)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 4921)
+Completed 200 OK in 69ms (Views: 36.7ms | ActiveRecord: 7.8ms | Allocations: 8566)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-04-19 15:18:29 +0100
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Shopping", "icon"=>"https://www.kindpng.com/picc/m/198-1980021_food-vector-food-icon-png-transparent-png.png"}, "commit"=>"Save"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 2.3ms | Allocations: 10440)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/categories_controller.rb:14:in `block in create'
+app/controllers/categories_controller.rb:13:in `create'
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 15:19:02 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered shared/_header.html.erb (Duration: 13.8ms | Allocations: 1381)
+  Rendered categories/new.html.erb within layouts/application (Duration: 17.5ms | Allocations: 2150)
+  Rendered layout layouts/application.html.erb (Duration: 70.5ms | Allocations: 17208)
+Completed 200 OK in 124ms (Views: 77.1ms | ActiveRecord: 16.9ms | Allocations: 24307)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-04-19 15:19:13 +0100
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Shopping", "icon"=>"https://www.kindpng.com/picc/m/198-1980021_food-vector-food-icon-png-transparent-png.png"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:14:in `block in create'
+  [1m[36mCategory Create (3.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Shopping"], ["icon", "https://www.kindpng.com/picc/m/198-1980021_food-vector-food-icon-png-transparent-png.png"], ["user_id", 1], ["created_at", "2022-04-19 14:19:13.936924"], ["updated_at", "2022-04-19 14:19:13.936924"]]
+  ↳ app/controllers/categories_controller.rb:14:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:14:in `block in create'
+Redirected to http://127.0.0.1:3000/categories
+Completed 302 Found in 65ms (ActiveRecord: 12.8ms | Allocations: 8356)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-04-19 15:19:14 +0100
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered shared/_header.html.erb (Duration: 11.4ms | Allocations: 742)
+  [1m[36mCategory Count (5.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 0.2ms | Allocations: 16)
+  [1m[36mCategory Load (3.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:7
+  Rendered shared/_card2.html.erb (Duration: 13.9ms | Allocations: 254)
+  Rendered categories/index.html.erb within layouts/application (Duration: 44.7ms | Allocations: 2574)
+  Rendered layout layouts/application.html.erb (Duration: 59.9ms | Allocations: 5425)
+Completed 200 OK in 69ms (Views: 58.9ms | ActiveRecord: 8.1ms | Allocations: 5836)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-04-19 15:21:34 +0100
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 6.1ms | Allocations: 296)
+  Rendered shared/_header.html.erb (Duration: 14.3ms | Allocations: 1423)
+  Rendered shared/_flash.html.erb (Duration: 2.9ms | Allocations: 531)
+  [1m[36mCategory Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 1.6ms | Allocations: 145)
+  [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered shared/_card2.html.erb (Duration: 2.1ms | Allocations: 230)
+  Rendered categories/index.html.erb within layouts/application (Duration: 48.9ms | Allocations: 4343)
+  Rendered layout layouts/application.html.erb (Duration: 66.6ms | Allocations: 7199)
+Completed 200 OK in 84ms (Views: 78.7ms | ActiveRecord: 3.3ms | Allocations: 8356)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 15:21:41 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.2ms | Allocations: 13)
+  Rendered shared/_header.html.erb (Duration: 8.4ms | Allocations: 1192)
+  Rendered categories/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 2111)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 4653)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.0ms | Allocations: 5077)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-04-19 15:21:55 +0100
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Restaurant", "icon"=>"https://www.kindpng.com/picc/m/198-1980021_food-vector-food-icon-png-transparent-png.png"}, "commit"=>"Save"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:14:in `block in create'
+  [1m[36mCategory Create (3.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Restaurant"], ["icon", "https://www.kindpng.com/picc/m/198-1980021_food-vector-food-icon-png-transparent-png.png"], ["user_id", 1], ["created_at", "2022-04-19 14:21:55.877189"], ["updated_at", "2022-04-19 14:21:55.877189"]]
+  ↳ app/controllers/categories_controller.rb:14:in `block in create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:14:in `block in create'
+Redirected to http://127.0.0.1:3000/categories
+Completed 302 Found in 36ms (ActiveRecord: 8.3ms | Allocations: 3545)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-04-19 15:21:56 +0100
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.2ms | Allocations: 13)
+  Rendered shared/_header.html.erb (Duration: 12.2ms | Allocations: 737)
+  Rendered shared/_flash.html.erb (Duration: 0.9ms | Allocations: 310)
+  [1m[36mCategory Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 0.2ms | Allocations: 15)
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered shared/_card2.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered shared/_card2.html.erb (Duration: 0.3ms | Allocations: 39)
+  Rendered categories/index.html.erb within layouts/application (Duration: 30.0ms | Allocations: 2654)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 5210)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 2.4ms | Allocations: 5605)
+
+

@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
     @category = current_user.categories.new(categories_params)
 
     respond_to do |format|
-      if @post.save
+      if @category.save
         format.html { redirect_to categories_path, notice: 'Category was created successfully' }
       else
         format.html { render :new, status: :unprocessable_entity }

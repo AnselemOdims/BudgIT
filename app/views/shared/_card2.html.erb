@@ -1,11 +1,11 @@
 <div class="card-1 card-2">
   <div>
     <div>
-      <%= image_tag 'https://www.kindpng.com/picc/m/198-1980021_food-vector-food-icon-png-transparent-png.png' %>
+      <%= image_tag category.icon %>
     </div>
     <div>
-      <p>Food</p>
-      <small>12, Apr, 2022</small>
+      <p><%= category.name %></p>
+      <small><%= category.created_at %></small>
     </div>
   </div>
   <div>
