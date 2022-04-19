@@ -3,7 +3,7 @@ class DealsController < ApplicationController
   load_and_authorize_resource except: :create
   
   def index
-    @deals = current_user.deals
+    @deals = current_user.deals.order('created_at DESC')
   end
 
   def show

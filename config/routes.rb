@@ -13,6 +13,6 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :categories
-    resources :deals
+    resources :categories, only: [:index, :show, :new, :create]
+    resources :deals, only: [:index, :show, :new, :create]
 end
