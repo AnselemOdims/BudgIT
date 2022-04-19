@@ -8615,3 +8615,460 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5380063897934428920)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/categories" for 127.0.0.1 at 2022-04-19 15:54:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 2.3ms | Allocations: 296)
+  Rendered shared/_header.html.erb (Duration: 17.7ms | Allocations: 1429)
+  Rendered shared/_flash.html.erb (Duration: 4.3ms | Allocations: 555)
+  [1m[36mCategory Count (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 2.2ms | Allocations: 145)
+  [1m[36mCategory Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:11
+  Rendered shared/_card2.html.erb (Duration: 11.1ms | Allocations: 1564)
+  Rendered categories/index.html.erb within layouts/application (Duration: 90.8ms | Allocations: 7972)
+  Rendered layout layouts/application.html.erb (Duration: 91.7ms | Allocations: 8060)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 5.7ms | Allocations: 14678)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"deals"}, missing required keys: [:category_id]
+Did you mean?  new_category_deal_url):
+    1: <%= link_to new_category_deal_path  do %>
+    2:   <div class="card-1 card-2">
+    3:     <div>
+    4:       <div>
+  
+app/views/shared/_card2.html.erb:1
+app/views/categories/index.html.erb:12
+app/views/categories/index.html.erb:11
+Started GET "/categories" for 127.0.0.1 at 2022-04-19 15:55:48 +0100
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 2.7ms | Allocations: 296)
+  Rendered shared/_header.html.erb (Duration: 20.7ms | Allocations: 1430)
+  Rendered shared/_flash.html.erb (Duration: 9.2ms | Allocations: 555)
+  [1m[36mCategory Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 2.4ms | Allocations: 145)
+  [1m[36mCategory Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:11
+  Rendered shared/_card2.html.erb (Duration: 8.1ms | Allocations: 1577)
+  Rendered categories/index.html.erb within layouts/application (Duration: 89.1ms | Allocations: 6315)
+  Rendered layout layouts/application.html.erb (Duration: 93.2ms | Allocations: 6403)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 5.2ms | Allocations: 7538)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"deals"}, missing required keys: [:category_id]
+Did you mean?  category_deals_url):
+    1: <%= link_to category_deals_path  do %>
+    2:   <div class="card-1 card-2">
+    3:     <div>
+    4:       <div>
+  
+app/views/shared/_card2.html.erb:1
+app/views/categories/index.html.erb:12
+app/views/categories/index.html.erb:11
+Started GET "/categories" for 127.0.0.1 at 2022-04-19 15:56:25 +0100
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 3.1ms | Allocations: 296)
+  Rendered shared/_header.html.erb (Duration: 12.1ms | Allocations: 1430)
+  Rendered shared/_flash.html.erb (Duration: 6.4ms | Allocations: 555)
+  [1m[36mCategory Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 2.9ms | Allocations: 145)
+  [1m[36mCategory Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mCategory Load (3.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:11
+  Rendered shared/_card2.html.erb (Duration: 2.6ms | Allocations: 320)
+  Rendered shared/_card2.html.erb (Duration: 0.6ms | Allocations: 68)
+  Rendered categories/index.html.erb within layouts/application (Duration: 56.1ms | Allocations: 5203)
+  Rendered layout layouts/application.html.erb (Duration: 151.1ms | Allocations: 20481)
+Completed 200 OK in 180ms (Views: 165.3ms | ActiveRecord: 5.2ms | Allocations: 21654)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 15:56:42 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.4ms | Allocations: 16)
+  Rendered shared/_header.html.erb (Duration: 20.5ms | Allocations: 911)
+  Rendered shared/_flash.html.erb (Duration: 2.0ms | Allocations: 344)
+  [1m[36mDeal Count (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 0.4ms | Allocations: 17)
+  [1m[36mDeal Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:8
+  Rendered deals/index.html.erb within layouts/application (Duration: 81.0ms | Allocations: 3799)
+  Rendered layout layouts/application.html.erb (Duration: 104.4ms | Allocations: 6442)
+Completed 200 OK in 154ms (Views: 97.7ms | ActiveRecord: 20.4ms | Allocations: 9742)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 15:58:19 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 35.6ms | Allocations: 998)
+  Rendered shared/_flash.html.erb (Duration: 8.5ms | Allocations: 549)
+  [1m[36mDeal Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 9.9ms | Allocations: 146)
+  [1m[36mDeal Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:8
+  Rendered deals/index.html.erb within layouts/application (Duration: 94.6ms | Allocations: 3631)
+  Rendered layout layouts/application.html.erb (Duration: 158.7ms | Allocations: 6486)
+Completed 200 OK in 182ms (Views: 171.4ms | ActiveRecord: 2.4ms | Allocations: 7680)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-04-19 15:58:41 +0100
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 14.0ms | Allocations: 836)
+  Rendered shared/_mobile_menu.html.erb (Duration: 2.4ms | Allocations: 293)
+  Rendered shared/_flash.html.erb (Duration: 1.7ms | Allocations: 323)
+  [1m[36mCategory Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered shared/_card1.html.erb (Duration: 0.3ms | Allocations: 16)
+  [1m[36mCategory Exists? (4.0ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:9
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:12
+  Rendered shared/_card2.html.erb (Duration: 3.8ms | Allocations: 302)
+  Rendered shared/_card2.html.erb (Duration: 1.0ms | Allocations: 68)
+  Rendered categories/index.html.erb within layouts/application (Duration: 79.0ms | Allocations: 4498)
+  Rendered layout layouts/application.html.erb (Duration: 114.3ms | Allocations: 7140)
+Completed 200 OK in 138ms (Views: 128.0ms | ActiveRecord: 6.5ms | Allocations: 8120)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-04-19 15:58:45 +0100
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 11.1ms | Allocations: 665)
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.2ms | Allocations: 12)
+  Rendered shared/_flash.html.erb (Duration: 1.2ms | Allocations: 289)
+  [1m[36mCategory Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered shared/_card1.html.erb (Duration: 0.3ms | Allocations: 15)
+  [1m[36mCategory Exists? (5.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:9
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:12
+  Rendered shared/_card2.html.erb (Duration: 4.8ms | Allocations: 68)
+  Rendered shared/_card2.html.erb (Duration: 0.8ms | Allocations: 68)
+  Rendered categories/index.html.erb within layouts/application (Duration: 54.4ms | Allocations: 3173)
+  Rendered layout layouts/application.html.erb (Duration: 74.7ms | Allocations: 5729)
+Completed 200 OK in 86ms (Views: 76.0ms | ActiveRecord: 7.8ms | Allocations: 6090)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 15:59:03 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 3.3ms | Allocations: 665)
+  Rendered shared/_flash.html.erb (Duration: 1.9ms | Allocations: 268)
+  [1m[36mDeal Count (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 0.2ms | Allocations: 16)
+  [1m[36mDeal Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:8
+  Rendered deals/index.html.erb within layouts/application (Duration: 28.8ms | Allocations: 2263)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 4985)
+Completed 200 OK in 64ms (Views: 56.9ms | ActiveRecord: 5.8ms | Allocations: 5331)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 16:00:42 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 67.1ms | Allocations: 4934)
+  Rendered deals/index.html.erb within layouts/application (Duration: 83.4ms | Allocations: 5407)
+  Rendered layout layouts/application.html.erb (Duration: 84.3ms | Allocations: 5495)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.0ms | Allocations: 6632)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `image1' for #<ActionView::Base:0x0000000001eb90>
+Did you mean?  image3
+               image2):
+    1: <header>
+    2:   <div>
+    3:     <%= link_to image_tag(image1), unauthenticated_root_path %>
+    4:     <%= link_to image_tag(image3), authenticated_root_path %>
+    5:   </div>
+    6:   <div>
+  
+app/views/shared/_header.html.erb:3
+app/views/deals/index.html.erb:1
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 16:01:20 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 14.2ms | Allocations: 1506)
+  Rendered shared/_flash.html.erb (Duration: 4.3ms | Allocations: 525)
+  [1m[36mDeal Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 3.6ms | Allocations: 146)
+  [1m[36mDeal Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:8
+  Rendered deals/index.html.erb within layouts/application (Duration: 51.5ms | Allocations: 4119)
+  Rendered layout layouts/application.html.erb (Duration: 81.1ms | Allocations: 6987)
+Completed 200 OK in 105ms (Views: 92.3ms | ActiveRecord: 2.1ms | Allocations: 8161)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:01:37 +0100
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 68.5ms | Allocations: 5038)
+  Rendered categories/index.html.erb within layouts/application (Duration: 81.6ms | Allocations: 5489)
+  Rendered layout layouts/application.html.erb (Duration: 82.4ms | Allocations: 5577)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms | Allocations: 6522)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `image3' for #<ActionView::Base:0x0000000001f090>
+Did you mean?  image2
+               image1):
+    1: <header>
+    2:   <div>
+    3:     <%= link_to image_tag(image1), unauthenticated_root_path %>
+    4:     <%= link_to image_tag(image3), authenticated_root_path %>
+    5:   </div>
+    6:   <div>
+    7:     <span><%= title %></span>
+  
+app/views/shared/_header.html.erb:4
+app/views/categories/index.html.erb:1
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:02:06 +0100
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 11.1ms | Allocations: 1040)
+  Rendered shared/_mobile_menu.html.erb (Duration: 3.9ms | Allocations: 293)
+  Rendered shared/_flash.html.erb (Duration: 4.8ms | Allocations: 245)
+  [1m[36mCategory Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered shared/_card1.html.erb (Duration: 2.1ms | Allocations: 145)
+  [1m[36mCategory Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:9
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:12
+  Rendered shared/_card2.html.erb (Duration: 6.5ms | Allocations: 302)
+  Rendered shared/_card2.html.erb (Duration: 1.7ms | Allocations: 68)
+  Rendered categories/index.html.erb within layouts/application (Duration: 65.8ms | Allocations: 4902)
+  Rendered layout layouts/application.html.erb (Duration: 88.4ms | Allocations: 7770)
+Completed 200 OK in 105ms (Views: 97.2ms | ActiveRecord: 3.8ms | Allocations: 8941)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 16:02:26 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 10.8ms | Allocations: 1325)
+  Rendered shared/_flash.html.erb (Duration: 1.5ms | Allocations: 317)
+  [1m[36mDeal Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 0.3ms | Allocations: 17)
+  [1m[36mDeal Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:8
+  Rendered deals/index.html.erb within layouts/application (Duration: 49.0ms | Allocations: 3432)
+  Rendered layout layouts/application.html.erb (Duration: 76.6ms | Allocations: 6087)
+Completed 200 OK in 94ms (Views: 88.2ms | ActiveRecord: 2.8ms | Allocations: 7066)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 16:04:33 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 12.6ms | Allocations: 1495)
+  Rendered shared/_flash.html.erb (Duration: 6.8ms | Allocations: 525)
+  [1m[36mDeal Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 2.8ms | Allocations: 146)
+  [1m[36mDeal Exists? (3.3ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:6
+  Rendered deals/index.html.erb within layouts/application (Duration: 59.3ms | Allocations: 4104)
+  Rendered layout layouts/application.html.erb (Duration: 88.9ms | Allocations: 6959)
+Completed 200 OK in 116ms (Views: 98.1ms | ActiveRecord: 4.5ms | Allocations: 8154)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 16:06:51 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 16.1ms | Allocations: 1144)
+  Rendered shared/_flash.html.erb (Duration: 2.1ms | Allocations: 268)
+  [1m[36mDeal Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 0.3ms | Allocations: 16)
+  [1m[36mDeal Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:6
+  Rendered deals/index.html.erb within layouts/application (Duration: 41.8ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 485.4ms | Allocations: 16150)
+Completed 200 OK in 495ms (Views: 490.1ms | ActiveRecord: 2.9ms | Allocations: 16511)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 16:07:45 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 6.8ms | Allocations: 1144)
+  Rendered shared/_flash.html.erb (Duration: 1.1ms | Allocations: 256)
+  [1m[36mDeal Count (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 0.2ms | Allocations: 16)
+  [1m[36mDeal Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:6
+  Rendered deals/index.html.erb within layouts/application (Duration: 33.4ms | Allocations: 2727)
+  Rendered layout layouts/application.html.erb (Duration: 328.1ms | Allocations: 15944)
+Completed 200 OK in 334ms (Views: 326.5ms | ActiveRecord: 5.9ms | Allocations: 16284)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 16:08:25 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 25.3ms | Allocations: 1144)
+  Rendered shared/_flash.html.erb (Duration: 3.4ms | Allocations: 247)
+  [1m[36mDeal Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 0.5ms | Allocations: 16)
+  [1m[36mDeal Exists? (10.0ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:6
+  Rendered deals/index.html.erb within layouts/application (Duration: 63.0ms | Allocations: 2718)
+  Rendered layout layouts/application.html.erb (Duration: 510.4ms | Allocations: 17380)
+Completed 200 OK in 523ms (Views: 502.4ms | ActiveRecord: 11.2ms | Allocations: 17720)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 16:10:56 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 26.0ms | Allocations: 1495)
+  Rendered shared/_flash.html.erb (Duration: 4.7ms | Allocations: 537)
+  [1m[36mDeal Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 2.7ms | Allocations: 147)
+  [1m[36mDeal Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:6
+  Rendered deals/index.html.erb within layouts/application (Duration: 66.9ms | Allocations: 4117)
+  Rendered layout layouts/application.html.erb (Duration: 486.0ms | Allocations: 17813)
+Completed 200 OK in 509ms (Views: 500.6ms | ActiveRecord: 3.9ms | Allocations: 18971)
+
+
+Started GET "/categories/1/deals/new" for 127.0.0.1 at 2022-04-19 16:11:29 +0100
+Processing by DealsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+Completed 406 Not Acceptable in 46ms (ActiveRecord: 16.0ms | Allocations: 3841)
+
+
+  
+ActionController::MissingExactTemplate (DealsController#new is missing a template for request formats: text/html):
+  
+actionpack (7.0.2.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:214:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.2.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.2.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'

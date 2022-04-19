@@ -1,14 +1,16 @@
-<div class="card-1 card-2">
-  <div>
+<%= link_to category_deals_path(category)  do %>
+  <div class="card-1 card-2">
     <div>
-      <%= image_tag category.icon %>
+      <div>
+        <%= image_tag category.icon %>
+      </div>
+      <div>
+        <p><%= category.name %></p>
+        <small><%= category.created_at %></small>
+      </div>
     </div>
     <div>
-      <p><%= category.name %></p>
-      <small><%= category.created_at %></small>
+      <p>$150.00</p>
     </div>
   </div>
-  <div>
-    <p>$150.00</p>
-  </div>
-</div>
+<% end %>

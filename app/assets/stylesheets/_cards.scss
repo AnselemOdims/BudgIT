@@ -2,8 +2,6 @@
 @import 'mixins';
 
 .card-1 {
-  @include display(row, space-between, center);
-
   background-color: #fff;
   padding: 20px;
   font-family: $font-1;
@@ -13,6 +11,10 @@
 
   p {
     margin: 10px 0;
+  }
+
+  .card-text {
+    @include display(row, space-between, center);
   }
 }
 
