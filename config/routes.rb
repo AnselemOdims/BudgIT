@@ -12,4 +12,8 @@ Rails.application.routes.draw do
         root :to => "splashs#index", as: :unauthenticated_root
       end
     end
+
+    resources :categories do
+      resources :deals
+    end
 end
