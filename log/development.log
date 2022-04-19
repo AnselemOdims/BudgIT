@@ -843,3 +843,429 @@ Processing by SplashsController#index as HTML
 Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 4260)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20220419072008)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b8e2f7adfc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_categories_on_user_id" ON "categories" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220419072008"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-04-19 08:32:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 629.2ms | Allocations: 118142)
+  Rendered layout layouts/application.html.erb (Duration: 658.0ms | Allocations: 133551)
+Completed 200 OK in 696ms (Views: 669.0ms | ActiveRecord: 0.0ms | Allocations: 139348)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-19 08:32:15 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 3.9ms | Allocations: 980)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 275)
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 722)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 32.2ms | Allocations: 4823)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 7421)
+Completed 200 OK in 84ms (Views: 48.5ms | ActiveRecord: 12.8ms | Allocations: 15305)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-19 08:32:39 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+[31mUnpermitted parameter: :full_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fa029942d40>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anselemodims@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["full_name", nil], ["created_at", "2022-04-19 07:32:39.810870"], ["updated_at", "2022-04-19 07:32:39.810870"], ["email", "anselemodims@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to 
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 6.2ms | Allocations: 15366)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Devise::RegistrationsController:0x0000000000e510>):
+  
+actionpack (7.0.2.3) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `public_send'
+actionpack (7.0.2.3) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `polymorphic_method'
+actionpack (7.0.2.3) lib/action_dispatch/routing/polymorphic_routes.rb:116:in `polymorphic_url'
+actionpack (7.0.2.3) lib/action_dispatch/routing/url_for.rb:187:in `full_url_for'
+actionpack (7.0.2.3) lib/action_dispatch/routing/url_for.rb:170:in `url_for'
+actionpack (7.0.2.3) lib/action_controller/metal/redirecting.rb:144:in `_compute_redirect_to_location'
+actionpack (7.0.2.3) lib/action_controller/metal/redirecting.rb:89:in `redirect_to'
+actionpack (7.0.2.3) lib/action_controller/metal/flash.rb:62:in `redirect_to'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:42:in `block in redirect_to'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:41:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:147:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:207:in `navigation_behavior'
+responders (3.0.1) lib/action_controller/responder.rb:174:in `rescue in to_html'
+responders (3.0.1) lib/action_controller/responder.rb:171:in `to_html'
+responders (3.0.1) lib/action_controller/responder.rb:165:in `respond'
+responders (3.0.1) lib/action_controller/responder.rb:158:in `call'
+responders (3.0.1) lib/action_controller/respond_with.rb:213:in `respond_with'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:25:in `create'
+actionpack (7.0.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:214:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.2.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.2.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-19 08:33:28 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.6ms | Allocations: 766)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 77)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.7ms | Allocations: 1511)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 3992)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 4806)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-19 08:33:48 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 7.9ms | Allocations: 652)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 17)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 77)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 21.2ms | Allocations: 1350)
+  Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 3791)
+Completed 200 OK in 52ms (Views: 43.8ms | ActiveRecord: 0.0ms | Allocations: 4475)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-19 08:34:05 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+[31mUnpermitted parameter: :full_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fa0293cf160>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anselemodims@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 648)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 7.3ms | Allocations: 1639)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 93)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 3311)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 5792)
+Completed 200 OK in 329ms (Views: 18.9ms | ActiveRecord: 0.7ms | Allocations: 11050)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-19 08:34:58 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+[31mUnpermitted parameter: :full_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fa0295b5c18>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anselemodims@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 648)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 473)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 93)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2136)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4617)
+Completed 200 OK in 338ms (Views: 13.6ms | ActiveRecord: 0.8ms | Allocations: 9658)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-19 08:39:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 72.9ms | Allocations: 24673)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 275)
+  Rendered devise/shared/_links.html.erb (Duration: 4.3ms | Allocations: 723)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 88.9ms | Allocations: 28878)
+  Rendered layout layouts/application.html.erb (Duration: 120.5ms | Allocations: 44364)
+Completed 200 OK in 238ms (Views: 126.3ms | ActiveRecord: 4.9ms | Allocations: 57608)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-19 08:39:33 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+[31mUnpermitted parameter: :full_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f125d4341c8>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anselemodims@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.3ms | Allocations: 761)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 4.8ms | Allocations: 1656)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 93)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3493)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 6007)
+Completed 200 OK in 335ms (Views: 20.2ms | ActiveRecord: 1.1ms | Allocations: 16054)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-19 08:39:53 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.9ms | Allocations: 828)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 98)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1684)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 16443)
+Completed 200 OK in 51ms (Views: 37.4ms | ActiveRecord: 5.1ms | Allocations: 20321)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-19 08:40:09 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anselemodims@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 648)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.5ms | Allocations: 519)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 93)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2188)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4696)
+Completed 200 OK in 325ms (Views: 13.4ms | ActiveRecord: 0.7ms | Allocations: 10502)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5019.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (40.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_development"[0m
+  [1m[35m (30.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_test"[0m
+  [1m[35m (252.3ms)[0m  [1m[35mCREATE DATABASE "budgit_development" ENCODING = 'unicode'[0m
+  [1m[35m (93.2ms)[0m  [1m[35mCREATE DATABASE "budgit_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE INDEX "index_categories_on_user_id" ON "categories" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "full_name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6))[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (5.5ms)[0m  [1m[35mALTER TABLE "categories" ADD CONSTRAINT "fk_rails_b8e2f7adfc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220419072008)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220418135122),
+(20220418135812);
+
+[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-19 07:41:00.891898"], ["updated_at", "2022-04-19 07:41:00.891898"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "67db20a34eaa99c0a5fb5e0638e95b19f47ca5f2"], ["created_at", "2022-04-19 07:41:00.905953"], ["updated_at", "2022-04-19 07:41:00.905953"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE INDEX "index_categories_on_user_id" ON "categories" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "full_name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6))[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "categories" ADD CONSTRAINT "fk_rails_b8e2f7adfc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220419072008)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220418135122),
+(20220418135812);
+
+[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-19 07:41:01.002113"], ["updated_at", "2022-04-19 07:41:01.002113"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-04-19 07:41:01.019406"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "67db20a34eaa99c0a5fb5e0638e95b19f47ca5f2"], ["created_at", "2022-04-19 07:41:01.028425"], ["updated_at", "2022-04-19 07:41:01.028425"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-19 08:41:13 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 65.1ms | Allocations: 24864)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 275)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 723)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 76.2ms | Allocations: 29069)
+  Rendered layout layouts/application.html.erb (Duration: 104.6ms | Allocations: 44555)
+Completed 200 OK in 214ms (Views: 110.9ms | ActiveRecord: 5.3ms | Allocations: 57767)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-19 08:41:28 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anselemodims@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.5ms | Allocations: 761)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 656)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 93)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2501)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5015)
+Completed 200 OK in 338ms (Views: 17.4ms | ActiveRecord: 0.9ms | Allocations: 16106)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-19 08:43:35 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselem@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anselem@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 648)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 489)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 93)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2159)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4642)
+Completed 200 OK in 317ms (Views: 12.3ms | ActiveRecord: 0.6ms | Allocations: 9988)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-19 08:45:39 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 75.9ms | Allocations: 24702)
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 723)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 93.5ms | Allocations: 28446)
+  Rendered layout layouts/application.html.erb (Duration: 125.1ms | Allocations: 43932)
+Completed 200 OK in 238ms (Views: 132.9ms | ActiveRecord: 71.0ms | Allocations: 57147)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-19 08:45:56 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem", "email"=>"anselemo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anselemo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["full_name", "Anselem"], ["created_at", "2022-04-19 07:45:56.738059"], ["updated_at", "2022-04-19 07:45:56.738059"], ["email", "anselemo@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 324ms (ActiveRecord: 3.3ms | Allocations: 13171)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 08:45:57 +0100
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 2951)
+Completed 200 OK in 34ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 6533)
+
+
