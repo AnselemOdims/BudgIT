@@ -7,7 +7,7 @@
   font-family: $font-1;
   font-size: 20px;
   box-shadow: $shadow-2;
-  border-radius: 4px;
+  border-radius: 5px;
 
   p {
     margin: 10px 0;
@@ -73,7 +73,7 @@
 }
 
 .cat-card {
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   font-size: 2rem;
   height: 130px;
@@ -210,4 +210,10 @@
       font-weight: bold
     }
   }
+}
+
+.empty {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 18px;
 }

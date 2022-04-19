@@ -5,7 +5,7 @@
 </div>
 <%= render 'shared/flash'%>
 <% if @category.deals %>
-  <p>No transactions for this category yet</p>
+  <p class='empty'>No transactions for this category yet</p>
 <% else %>
   <% @category.deals.each do |deal| %>
     <%= render 'shared/card3', deal: deal %>

@@ -7,7 +7,7 @@
   </div>
 </div>
 <% if @categories.empty? %>
-  <p>No categories added yet</p>
+  <p class='empty'>No categories added yet</p>
 <% else %>
   <% @categories.each do |category| %>
     <%= render 'shared/card2', category: category %>
