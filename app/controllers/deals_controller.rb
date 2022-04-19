@@ -14,10 +14,11 @@ class DealsController < ApplicationController
 
   def create
     @deal= current_user.deals.new(deals_params)
+    @category = Category.find(deals_params['category_id'])
 
     respond_to do |format|
-      if @deal.save
-        format.html { redirect_to deals_path, notice: 'Transaction was created successfully' }
+      if @deal.save!
+        format.html { redirect_to category_path(@category), notice: 'Transaction was created successfully' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
