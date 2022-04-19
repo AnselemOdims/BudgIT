@@ -40,7 +40,7 @@
 
         border-radius: 0;
         width: 100%;
-        background: $primary-color-1;
+        background: $accent-color-1;
         font-family: $font-1;
         font-size: 20px;
         color: #fff;
@@ -124,5 +124,19 @@
     &:last-of-type {
       margin: 0 20px;
     }
+  }
+}
+
+select#deal_category_id {
+  width: 100%;
+  padding: 25px 20px;
+  cursor: pointer;
+  border: solid 2px rgb(230, 228, 228);
+  background: #fff;
+  color: #8b9dab;
+
+  &:focus {
+    border: solid 2px $primary-color-1;
+    outline: none;
   }
 }

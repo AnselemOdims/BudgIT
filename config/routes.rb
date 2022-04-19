@@ -13,7 +13,6 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :categories do
-      resources :deals
-    end
+    resources :categories
+    resources :deals
 end

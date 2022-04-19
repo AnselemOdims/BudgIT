@@ -5,6 +5,7 @@ class DealsController < ApplicationController
 
   def new
     @deal = Deal.new
+    @categories = current_user.categories
   end
 
   def create
@@ -12,7 +13,7 @@ class DealsController < ApplicationController
 
     respond_to do |format|
       if @deal.save
-        format.html { redirect_to categories_path, notice: 'Category was created successfully' }
+        format.html { redirect_to deals_path, notice: 'Category was created successfully' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -21,7 +22,7 @@ class DealsController < ApplicationController
 
   private
 
-  def categories_params
-    params.require(:deal).permit(:name, :icon)
+  def deals_params
+    params.require(:deal).permit(:name, :amount, :category_id)
   end
 end

@@ -7,9 +7,9 @@
   <p>No transactions added for this category</p>
 <% else %>
   <% @deals.each do |deal| %>
-    <%= render 'shared/card2', deal: deal %>
+    <%= render 'shared/card2', category: deal %>
   <% end %>
 <% end %>
 <div class='save-btn' >
-<%= link_to 'Add New Transaction', new_category_deal_path %>
+<%= link_to 'Add New Transaction', new_deal_path %>
 </div>

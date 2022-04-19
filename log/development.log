@@ -9072,3 +9072,400 @@ puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.4) lib/puma/server.rb:441:in `process_client'
 puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 16:12:25 +0100
+Processing by DealsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 17.0ms | Allocations: 1144)
+  Rendered shared/_flash.html.erb (Duration: 1.7ms | Allocations: 274)
+  [1m[36mDeal Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 0.3ms | Allocations: 16)
+  [1m[36mDeal Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:6
+  Rendered deals/index.html.erb within layouts/application (Duration: 59.7ms | Allocations: 2937)
+  Rendered layout layouts/application.html.erb (Duration: 91.4ms | Allocations: 5506)
+Completed 200 OK in 104ms (Views: 97.2ms | ActiveRecord: 4.6ms | Allocations: 5862)
+
+
+Started GET "/categories/1/deals" for 127.0.0.1 at 2022-04-19 16:26:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/categories/1/deals"):
+  
+Started GET "/categories/" for 127.0.0.1 at 2022-04-19 16:26:36 +0100
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 19.6ms | Allocations: 1042)
+  Rendered shared/_mobile_menu.html.erb (Duration: 2.1ms | Allocations: 293)
+  Rendered shared/_flash.html.erb (Duration: 4.4ms | Allocations: 537)
+  [1m[36mCategory Count (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered shared/_card1.html.erb (Duration: 2.0ms | Allocations: 145)
+  [1m[36mCategory Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:9
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:12
+  Rendered shared/_card2.html.erb (Duration: 3.7ms | Allocations: 338)
+  Rendered shared/_card2.html.erb (Duration: 1.0ms | Allocations: 88)
+  Rendered categories/index.html.erb within layouts/application (Duration: 167.6ms | Allocations: 9232)
+  Rendered layout layouts/application.html.erb (Duration: 306.0ms | Allocations: 24493)
+Completed 200 OK in 378ms (Views: 323.9ms | ActiveRecord: 42.3ms | Allocations: 31059)
+
+
+Started GET "/deals.1" for 127.0.0.1 at 2022-04-19 16:26:59 +0100
+Processing by DealsController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 21.1ms | Allocations: 1394)
+  Rendered shared/_flash.html.erb (Duration: 1.6ms | Allocations: 326)
+  [1m[36mDeal Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 0.2ms | Allocations: 17)
+  [1m[36mDeal Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:6
+  Rendered deals/index.html.erb within layouts/application (Duration: 53.9ms | Allocations: 3902)
+  Rendered layout layouts/application.html.erb (Duration: 73.8ms | Allocations: 6545)
+Completed 200 OK in 96ms (Views: 80.0ms | ActiveRecord: 2.8ms | Allocations: 9809)
+
+
+Started GET "/deals.1" for 127.0.0.1 at 2022-04-19 16:29:31 +0100
+Processing by DealsController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 14.9ms | Allocations: 1495)
+  Rendered shared/_flash.html.erb (Duration: 7.3ms | Allocations: 537)
+  [1m[36mDeal Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 3.2ms | Allocations: 146)
+  [1m[36mDeal Exists? (3.8ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:6
+  Rendered deals/index.html.erb within layouts/application (Duration: 68.1ms | Allocations: 4095)
+  Rendered layout layouts/application.html.erb (Duration: 97.2ms | Allocations: 6950)
+Completed 200 OK in 122ms (Views: 113.2ms | ActiveRecord: 4.8ms | Allocations: 8226)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:30:17 +0100
+Processing by DealsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 61.3ms | Allocations: 5587)
+  Rendered deals/new.html.erb within layouts/application (Duration: 64.3ms | Allocations: 5937)
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | Allocations: 6019)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms | Allocations: 7684)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `image3' for #<ActionView::Base:0x00000000025d28>
+Did you mean?  image2
+               image1):
+    1: <header>
+    2:   <div>
+    3:     <%= link_to image_tag(image1), unauthenticated_root_path %>
+    4:     <%= link_to image_tag(image3), authenticated_root_path %>
+    5:   </div>
+    6:   <div>
+    7:     <span><%= title %></span>
+  
+app/views/shared/_header.html.erb:4
+app/views/deals/new.html.erb:1
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:30:47 +0100
+Processing by DealsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 17.2ms | Allocations: 1495)
+  Rendered deals/new.html.erb within layouts/application (Duration: 36.6ms | Allocations: 4148)
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | Allocations: 6991)
+Completed 200 OK in 90ms (Views: 79.3ms | ActiveRecord: 0.0ms | Allocations: 8156)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:32:10 +0100
+Processing by DealsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 17.5ms | Allocations: 1506)
+  Rendered deals/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 3518)
+  Rendered layout layouts/application.html.erb (Duration: 337.2ms | Allocations: 16608)
+Completed 200 OK in 398ms (Views: 394.3ms | ActiveRecord: 0.0ms | Allocations: 17805)
+
+
+Started POST "/deals/new" for 127.0.0.1 at 2022-04-19 16:33:15 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/deals/new"):
+  
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:33:16 +0100
+Processing by DealsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 14.1ms | Allocations: 1144)
+  Rendered deals/new.html.erb within layouts/application (Duration: 26.7ms | Allocations: 2686)
+  Rendered layout layouts/application.html.erb (Duration: 58.4ms | Allocations: 5228)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.0ms | Allocations: 5598)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:35:06 +0100
+Processing by DealsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 25.6ms | Allocations: 1495)
+  Rendered deals/new.html.erb within layouts/application (Duration: 48.6ms | Allocations: 2579)
+  Rendered layout layouts/application.html.erb (Duration: 81.7ms | Allocations: 5408)
+Completed 200 OK in 107ms (Views: 98.2ms | ActiveRecord: 0.0ms | Allocations: 6573)
+
+
+Started POST "/deals" for 127.0.0.1 at 2022-04-19 16:35:40 +0100
+Processing by DealsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deal"=>{"name"=>"hello", "amount"=>"120"}, "commit"=>"Save"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 1.7ms | Allocations: 7497)
+
+
+  
+NameError (undefined local variable or method `deals_params' for #<DealsController:0x00000000026868>
+Did you mean?  deals_path):
+  
+app/controllers/deals_controller.rb:11:in `create'
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:36:05 +0100
+Processing by DealsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 9.4ms | Allocations: 1333)
+  Rendered deals/new.html.erb within layouts/application (Duration: 15.2ms | Allocations: 2103)
+  Rendered layout layouts/application.html.erb (Duration: 86.4ms | Allocations: 17144)
+Completed 200 OK in 215ms (Views: 94.4ms | ActiveRecord: 29.3ms | Allocations: 25123)
+
+
+Started POST "/deals" for 127.0.0.1 at 2022-04-19 16:36:22 +0100
+Processing by DealsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deal"=>{"name"=>"hello", "amount"=>"120"}, "commit"=>"Save"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:11:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 17.3ms | Allocations: 1253)
+  Rendered deals/new.html.erb within layouts/application (Duration: 26.5ms | Allocations: 1675)
+  Rendered layout layouts/application.html.erb (Duration: 59.2ms | Allocations: 4233)
+Completed 422 Unprocessable Entity in 189ms (Views: 73.4ms | ActiveRecord: 19.3ms | Allocations: 13074)
+
+
+Started POST "/deals" for 127.0.0.1 at 2022-04-19 16:36:26 +0100
+Processing by DealsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deal"=>{"name"=>"hello", "amount"=>"120"}, "commit"=>"Save"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:11:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 11.3ms | Allocations: 1140)
+  Rendered deals/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 1507)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 4041)
+Completed 422 Unprocessable Entity in 94ms (Views: 58.5ms | ActiveRecord: 2.9ms | Allocations: 6437)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:42:59 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 16.2ms | Allocations: 1497)
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 78.2ms | Allocations: 6702)
+  Rendered layout layouts/application.html.erb (Duration: 143.2ms | Allocations: 21968)
+Completed 200 OK in 305ms (Views: 136.8ms | ActiveRecord: 58.3ms | Allocations: 38533)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:45:44 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 16.3ms | Allocations: 1495)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 36.3ms | Allocations: 3247)
+  Rendered layout layouts/application.html.erb (Duration: 374.2ms | Allocations: 16842)
+Completed 200 OK in 403ms (Views: 387.0ms | ActiveRecord: 2.0ms | Allocations: 19273)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:46:29 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 5.2ms | Allocations: 1144)
+  [1m[36mCategory Load (5.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 18.3ms | Allocations: 2283)
+  Rendered layout layouts/application.html.erb (Duration: 263.4ms | Allocations: 16873)
+Completed 200 OK in 286ms (Views: 265.8ms | ActiveRecord: 6.4ms | Allocations: 18341)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:47:24 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 9.1ms | Allocations: 1144)
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 28.3ms | Allocations: 2282)
+  Rendered layout layouts/application.html.erb (Duration: 382.4ms | Allocations: 15946)
+Completed 200 OK in 403ms (Views: 388.8ms | ActiveRecord: 1.4ms | Allocations: 17305)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:47:42 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 8.4ms | Allocations: 1144)
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 26.8ms | Allocations: 2282)
+  Rendered layout layouts/application.html.erb (Duration: 380.1ms | Allocations: 16878)
+Completed 200 OK in 398ms (Views: 383.5ms | ActiveRecord: 2.1ms | Allocations: 18229)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:48:28 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 14.0ms | Allocations: 1144)
+  [1m[36mCategory Load (8.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 30.9ms | Allocations: 2283)
+  Rendered layout layouts/application.html.erb (Duration: 321.2ms | Allocations: 16417)
+Completed 200 OK in 346ms (Views: 317.2ms | ActiveRecord: 13.8ms | Allocations: 17773)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:48:46 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 14.8ms | Allocations: 1144)
+  [1m[36mCategory Load (5.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 28.7ms | Allocations: 2282)
+  Rendered layout layouts/application.html.erb (Duration: 59.0ms | Allocations: 4865)
+Completed 200 OK in 88ms (Views: 56.3ms | ActiveRecord: 6.7ms | Allocations: 6230)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:50:20 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 13.0ms | Allocations: 1144)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 2282)
+  Rendered layout layouts/application.html.erb (Duration: 384.1ms | Allocations: 15946)
+Completed 200 OK in 413ms (Views: 387.5ms | ActiveRecord: 5.9ms | Allocations: 17308)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:51:03 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 16.2ms | Allocations: 1144)
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 41.5ms | Allocations: 2282)
+  Rendered layout layouts/application.html.erb (Duration: 415.6ms | Allocations: 16449)
+Completed 200 OK in 441ms (Views: 425.9ms | ActiveRecord: 2.7ms | Allocations: 17799)
+
+
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:52:16 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 8.6ms | Allocations: 1144)
+  [1m[36mCategory Load (2.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 31.0ms | Allocations: 2282)
+  Rendered layout layouts/application.html.erb (Duration: 401.6ms | Allocations: 16383)
+Completed 200 OK in 430ms (Views: 407.0ms | ActiveRecord: 3.9ms | Allocations: 17742)
+
+
+Started POST "/deals" for 127.0.0.1 at 2022-04-19 16:53:24 +0100
+Processing by DealsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deal"=>{"name"=>"hello", "amount"=>"120", "category_id"=>"1"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/deals_controller.rb:15:in `block in create'
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:15:in `block in create'
+  [1m[36mDeal Create (5.2ms)[0m  [1m[32mINSERT INTO "deals" ("name", "amount", "category_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "hello"], ["amount", 120], ["category_id", 1], ["user_id", 1], ["created_at", "2022-04-19 15:53:24.644445"], ["updated_at", "2022-04-19 15:53:24.644445"]]
+  ↳ app/controllers/deals_controller.rb:15:in `block in create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/deals_controller.rb:15:in `block in create'
+Redirected to http://127.0.0.1:3000/deals
+Completed 302 Found in 55ms (ActiveRecord: 9.3ms | Allocations: 6902)
+
+
+Started GET "/deals" for 127.0.0.1 at 2022-04-19 16:53:25 +0100
+Processing by DealsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 12.9ms | Allocations: 1152)
+  Rendered shared/_flash.html.erb (Duration: 2.6ms | Allocations: 510)
+  [1m[36mDeal Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:4
+  Rendered shared/_card1.html.erb (Duration: 1.5ms | Allocations: 145)
+  [1m[36mDeal Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:6
+  [1m[36mDeal Load (0.7ms)[0m  [1m[34mSELECT "deals".* FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:9
+  Rendered shared/_card2.html.erb (Duration: 29.9ms | Allocations: 3740)
+  Rendered deals/index.html.erb within layouts/application (Duration: 84.6ms | Allocations: 8291)
+  Rendered layout layouts/application.html.erb (Duration: 85.4ms | Allocations: 8373)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 3.8ms | Allocations: 8799)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for #<Deal id: 1, name: "hello", amount: 120, category_id: 1, user_id: 1, created_at: "2022-04-19 15:53:24.644445000 +0000", updated_at: "2022-04-19 15:53:24.644445000 +0000">):
+    2:   <div class="card-1 card-2">
+    3:     <div>
+    4:       <div>
+    5:         <%= image_tag category.icon %>
+    6:       </div>
+    7:       <div>
+    8:         <p><%= category.name %></p>
+  
+app/views/shared/_card2.html.erb:5
+app/views/shared/_card2.html.erb:1
+app/views/deals/index.html.erb:10
+app/views/deals/index.html.erb:9
+Started GET "/deals/new" for 127.0.0.1 at 2022-04-19 16:54:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 817.2ms | Allocations: 60147)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 906.1ms | Allocations: 68931)
+  Rendered layout layouts/application.html.erb (Duration: 991.4ms | Allocations: 84401)
+Completed 200 OK in 1402ms (Views: 1010.1ms | ActiveRecord: 32.6ms | Allocations: 115276)
+
+
+  [1m[36mDeal Load (1.4ms)[0m  [1m[34mSELECT "deals".* FROM "deals"[0m
