@@ -1,6 +1,6 @@
 class Deal < ApplicationRecord
+  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   belongs_to :category
-  belongs_to :user
 
   validates :name, presence: true
   validates :amount, presence: true

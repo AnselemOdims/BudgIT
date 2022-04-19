@@ -13818,3 +13818,645 @@ Processing by CategoriesController#show as TURBO_STREAM
 Completed 200 OK in 86ms (Views: 67.7ms | ActiveRecord: 4.3ms | Allocations: 10583)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5013.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5008.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_development"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeForeignKeyForCategories (20220419201344)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "categories" RENAME COLUMN "user_id" TO "author_id"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER INDEX "index_categories_on_user_id" RENAME TO "index_categories_on_author_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220419201344"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeForeignKeyForDeals (20220419201456)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "deals" RENAME COLUMN "user_id" TO "author_id"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER INDEX "index_deals_on_user_id" RENAME TO "index_deals_on_author_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220419201456"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5007.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5008.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5008.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (26.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_development"[0m
+  [1m[35m (37.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budgit_test"[0m
+  [1m[35m (251.1ms)[0m  [1m[35mCREATE DATABASE "budgit_development" ENCODING = 'unicode'[0m
+  [1m[35m (95.3ms)[0m  [1m[35mCREATE DATABASE "budgit_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "author_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE INDEX "index_categories_on_author_id" ON "categories" ("author_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "deals" CASCADE[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "deals" ("id" bigserial primary key, "name" character varying, "amount" integer, "category_id" bigint NOT NULL, "author_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE INDEX "index_deals_on_author_id" ON "deals" ("author_id")[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE INDEX "index_deals_on_category_id" ON "deals" ("category_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "full_name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6))[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "categories" ADD CONSTRAINT "fk_rails_139f1652e1"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "deals" ADD CONSTRAINT "fk_rails_6b084cd147"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "deals" ADD CONSTRAINT "fk_rails_f9f25e5329"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220419201456)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220418135122),
+(20220418135812),
+(20220419072008),
+(20220419143807),
+(20220419201344);
+
+[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-19 20:35:57.478650"], ["updated_at", "2022-04-19 20:35:57.478650"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "42baeb97412868b132ee40f9349c44849d17d18c"], ["created_at", "2022-04-19 20:35:57.492670"], ["updated_at", "2022-04-19 20:35:57.492670"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "author_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE INDEX "index_categories_on_author_id" ON "categories" ("author_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "deals" CASCADE[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "deals" ("id" bigserial primary key, "name" character varying, "amount" integer, "category_id" bigint NOT NULL, "author_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE INDEX "index_deals_on_author_id" ON "deals" ("author_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_deals_on_category_id" ON "deals" ("category_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "full_name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6))[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mALTER TABLE "categories" ADD CONSTRAINT "fk_rails_139f1652e1"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.5ms)[0m  [1m[35mALTER TABLE "deals" ADD CONSTRAINT "fk_rails_6b084cd147"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (4.2ms)[0m  [1m[35mALTER TABLE "deals" ADD CONSTRAINT "fk_rails_f9f25e5329"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220419201456)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220418135122),
+(20220418135812),
+(20220419072008),
+(20220419143807),
+(20220419201344);
+
+[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-19 20:35:57.667373"], ["updated_at", "2022-04-19 20:35:57.667373"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-04-19 20:35:57.680896"], ["key", "environment"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "42baeb97412868b132ee40f9349c44849d17d18c"], ["created_at", "2022-04-19 20:35:57.695875"], ["updated_at", "2022-04-19 20:35:57.695875"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-04-19 21:37:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 133.1ms | Allocations: 26844)
+  Rendered layout layouts/application.html.erb (Duration: 186.4ms | Allocations: 42365)
+Completed 200 OK in 216ms (Views: 194.6ms | ActiveRecord: 0.0ms | Allocations: 51329)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-19 21:37:32 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 6.1ms | Allocations: 1072)
+  Rendered devise/shared/_links.html.erb (Duration: 4.3ms | Allocations: 892)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.1ms | Allocations: 4396)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 7081)
+Completed 200 OK in 62ms (Views: 38.0ms | ActiveRecord: 0.0ms | Allocations: 14553)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-19 21:38:17 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 33.1ms | Allocations: 6615)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 35.1ms | Allocations: 7103)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 7192)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms | Allocations: 8820)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `image3' for #<ActionView::Base:0x0000000000dd18>
+Did you mean?  image2
+               image1):
+    1: <header>
+    2:   <div>
+    3:     <%= link_to image_tag(image1), unauthenticated_root_path %>
+    4:     <%= link_to image_tag(image3), authenticated_root_path %>
+    5:   </div>
+    6:   <div>
+    7:     <span><%= title %></span>
+  
+app/views/shared/_header.html.erb:4
+app/views/devise/registrations/new.html.erb:1
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-19 21:39:08 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 7.6ms | Allocations: 1045)
+  Rendered devise/shared/_links.html.erb (Duration: 6.4ms | Allocations: 643)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.0ms | Allocations: 2977)
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 5831)
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 7559)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-19 21:39:38 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anselem Odims", "email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anselemodims@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["full_name", "Anselem Odims"], ["created_at", "2022-04-19 20:39:39.305134"], ["updated_at", "2022-04-19 20:39:39.305134"], ["email", "anselemodims@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 377ms (ActiveRecord: 7.8ms | Allocations: 10672)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 21:39:39 +0100
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 4.0ms | Allocations: 885)
+  Rendered shared/_mobile_menu.html.erb (Duration: 2.6ms | Allocations: 578)
+  Rendered shared/_flash.html.erb (Duration: 2.0ms | Allocations: 257)
+  [1m[36mCategory Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered shared/_card1.html.erb (Duration: 1.5ms | Allocations: 158)
+  [1m[36mCategory Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:9
+  Rendered categories/index.html.erb within layouts/application (Duration: 38.4ms | Allocations: 4695)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 7342)
+Completed 200 OK in 73ms (Views: 47.7ms | ActiveRecord: 5.6ms | Allocations: 11371)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 21:39:48 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 3.9ms | Allocations: 1149)
+  Rendered categories/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2151)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 4698)
+Completed 200 OK in 35ms (Views: 19.6ms | ActiveRecord: 2.7ms | Allocations: 8164)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-04-19 21:40:06 +0100
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Groceries", "icon"=>"https://media.istockphoto.com/photos/brown-paper-shopping-bag-full-of-groceries-on-white-backdrop-picture-id171583541?k=20&m=171583541&s=612x612&w=0&h=SukpXjYwMR8FcO8ICNtIP9Svc1YZ86wSEXNOt8_7pOk="}, "commit"=>"Save"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.8ms | Allocations: 6278)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Category.):
+  
+app/controllers/categories_controller.rb:15:in `create'
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 21:57:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 88.2ms | Allocations: 26665)
+  Rendered categories/new.html.erb within layouts/application (Duration: 101.9ms | Allocations: 28704)
+  Rendered layout layouts/application.html.erb (Duration: 129.3ms | Allocations: 44285)
+Completed 200 OK in 243ms (Views: 133.3ms | ActiveRecord: 4.9ms | Allocations: 60835)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-04-19 21:58:38 +0100
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Groceries", "icon"=>"https://media.istockphoto.com/photos/brown-paper-shopping-bag-full-of-groceries-on-white-backdrop-picture-id171583541?k=20&m=171583541&s=612x612&w=0&h=SukpXjYwMR8FcO8ICNtIP9Svc1YZ86wSEXNOt8_7pOk="}, "commit"=>"Save"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 6.1ms | Allocations: 13582)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Category.):
+  
+app/controllers/categories_controller.rb:15:in `create'
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 21:59:25 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 4.8ms | Allocations: 1268)
+  Rendered categories/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1969)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4569)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 4970)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-04-19 21:59:55 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Groceries", "icon"=>"https://media.istockphoto.com/photos/brown-paper-shopping-bag-full-of-groceries-on-white-backdrop-picture-id171583541?k=20&m=171583541&s=612x612&w=0&h=SukpXjYwMR8FcO8ICNtIP9Svc1YZ86wSEXNOt8_7pOk="}, "commit"=>"Save"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 10.4ms | Allocations: 26997)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Category.):
+  
+app/controllers/categories_controller.rb:15:in `create'
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 22:02:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 76.7ms | Allocations: 27028)
+  Rendered categories/new.html.erb within layouts/application (Duration: 94.0ms | Allocations: 29076)
+  Rendered layout layouts/application.html.erb (Duration: 129.4ms | Allocations: 44657)
+Completed 200 OK in 231ms (Views: 132.8ms | ActiveRecord: 3.9ms | Allocations: 61224)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-04-19 22:02:17 +0100
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Groceries", "icon"=>"https://media.istockphoto.com/photos/brown-paper-shopping-bag-full-of-groceries-on-white-backdrop-picture-id171583541?k=20&m=171583541&s=612x612&w=0&h=SukpXjYwMR8FcO8ICNtIP9Svc1YZ86wSEXNOt8_7pOk="}, "commit"=>"Save"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 8.9ms | Allocations: 13587)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Category.):
+  
+app/controllers/categories_controller.rb:15:in `create'
+Started POST "/categories" for 127.0.0.1 at 2022-04-19 22:02:21 +0100
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Groceries", "icon"=>"https://media.istockphoto.com/photos/brown-paper-shopping-bag-full-of-groceries-on-white-backdrop-picture-id171583541?k=20&m=171583541&s=612x612&w=0&h=SukpXjYwMR8FcO8ICNtIP9Svc1YZ86wSEXNOt8_7pOk="}, "commit"=>"Save"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms | Allocations: 2075)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Category.):
+  
+app/controllers/categories_controller.rb:15:in `create'
+Started POST "/categories" for 127.0.0.1 at 2022-04-19 22:02:25 +0100
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Groceries", "icon"=>"https://media.istockphoto.com/photos/brown-paper-shopping-bag-full-of-groceries-on-white-backdrop-picture-id171583541?k=20&m=171583541&s=612x612&w=0&h=SukpXjYwMR8FcO8ICNtIP9Svc1YZ86wSEXNOt8_7pOk="}, "commit"=>"Save"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms | Allocations: 1828)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Category.):
+  
+app/controllers/categories_controller.rb:15:in `create'
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 22:02:40 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 8.9ms | Allocations: 1250)
+  Rendered categories/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1890)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 4485)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.0ms | Allocations: 4868)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 22:02:43 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 6.4ms | Allocations: 1149)
+  Rendered categories/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1746)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 4292)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 4635)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 22:07:10 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 12.1ms | Allocations: 1513)
+  Rendered categories/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 2616)
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 17907)
+Completed 200 OK in 77ms (Views: 53.3ms | ActiveRecord: 4.8ms | Allocations: 26150)
+
+
+Started GET "/" for ::1 at 2022-04-19 22:07:32 +0100
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3791)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 4834)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-19 22:07:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.4ms | Allocations: 872)
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 892)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 3815)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 6501)
+Completed 200 OK in 47ms (Views: 26.4ms | ActiveRecord: 4.7ms | Allocations: 11345)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-19 22:07:50 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"anselemodims@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "anselemodims@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 361ms (ActiveRecord: 1.5ms | Allocations: 9788)
+
+
+Started GET "/" for ::1 at 2022-04-19 22:07:50 +0100
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 4.3ms | Allocations: 795)
+  Rendered shared/_mobile_menu.html.erb (Duration: 22.2ms | Allocations: 577)
+  Rendered shared/_flash.html.erb (Duration: 1.9ms | Allocations: 251)
+  [1m[36mCategory Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered shared/_card1.html.erb (Duration: 2.3ms | Allocations: 158)
+  [1m[36mCategory Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:9
+  Rendered categories/index.html.erb within layouts/application (Duration: 51.1ms | Allocations: 4354)
+  Rendered layout layouts/application.html.erb (Duration: 60.0ms | Allocations: 6983)
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 1.6ms | Allocations: 7523)
+
+
+Started GET "/categories/new" for ::1 at 2022-04-19 22:08:11 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 5.1ms | Allocations: 1153)
+  Rendered categories/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1801)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 4372)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 4723)
+
+
+Started POST "/categories" for ::1 at 2022-04-19 22:08:21 +0100
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Groceries", "icon"=>"https://media.istockphoto.com/photos/brown-paper-shopping-bag-full-of-groceries-on-white-backdrop-picture-id171583541?k=20&m=171583541&s=612x612&w=0&h=SukpXjYwMR8FcO8ICNtIP9Svc1YZ86wSEXNOt8_7pOk="}, "commit"=>"Save"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms | Allocations: 2445)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Category.):
+  
+app/controllers/categories_controller.rb:15:in `create'
+Started GET "/categories/new" for ::1 at 2022-04-19 22:10:50 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 79.9ms | Allocations: 26789)
+  Rendered categories/new.html.erb within layouts/application (Duration: 90.1ms | Allocations: 28867)
+  Rendered layout layouts/application.html.erb (Duration: 126.6ms | Allocations: 44448)
+Completed 200 OK in 240ms (Views: 129.9ms | ActiveRecord: 4.6ms | Allocations: 60975)
+
+
+Started POST "/categories" for ::1 at 2022-04-19 22:11:01 +0100
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Groceries", "icon"=>"https://media.istockphoto.com/photos/brown-paper-shopping-bag-full-of-groceries-on-white-backdrop-picture-id171583541?k=20&m=171583541&s=612x612&w=0&h=SukpXjYwMR8FcO8ICNtIP9Svc1YZ86wSEXNOt8_7pOk="}, "commit"=>"Save"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:18:in `block in create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:18:in `block in create'
+  [1m[36mCategory Create (5.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Groceries"], ["icon", "https://media.istockphoto.com/photos/brown-paper-shopping-bag-full-of-groceries-on-white-backdrop-picture-id171583541?k=20&m=171583541&s=612x612&w=0&h=SukpXjYwMR8FcO8ICNtIP9Svc1YZ86wSEXNOt8_7pOk="], ["author_id", 1], ["created_at", "2022-04-19 21:11:01.111817"], ["updated_at", "2022-04-19 21:11:01.111817"]]
+  ↳ app/controllers/categories_controller.rb:18:in `block in create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:18:in `block in create'
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 114ms (ActiveRecord: 16.4ms | Allocations: 19467)
+
+
+Started GET "/categories" for ::1 at 2022-04-19 22:11:01 +0100
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 11.5ms | Allocations: 791)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:2
+  Rendered shared/_mobile_menu.html.erb (Duration: 4.4ms | Allocations: 577)
+  Rendered shared/_flash.html.erb (Duration: 1.6ms | Allocations: 250)
+  [1m[36mCategory Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered shared/_card1.html.erb (Duration: 1.2ms | Allocations: 157)
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:9
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:12
+  [1m[36mDeal Load (0.7ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/models/deal.rb:10:in `sum_amounts'
+  Rendered shared/_card2.html.erb (Duration: 29.6ms | Allocations: 5206)
+  Rendered categories/index.html.erb within layouts/application (Duration: 92.3ms | Allocations: 11127)
+  Rendered layout layouts/application.html.erb (Duration: 104.7ms | Allocations: 13803)
+Completed 200 OK in 113ms (Views: 100.9ms | ActiveRecord: 8.0ms | Allocations: 14288)
+
+
+Started GET "/categories/1" for ::1 at 2022-04-19 22:11:15 +0100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 7.7ms | Allocations: 1155)
+  [1m[36mDeal Load (2.5ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/models/deal.rb:10:in `sum_amounts'
+  Rendered shared/_card1.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 341)
+  [1m[36mDeal Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" WHERE "deals"."category_id" = $1 LIMIT $2[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:7
+  Rendered categories/show.html.erb within layouts/application (Duration: 24.8ms | Allocations: 3617)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 6170)
+Completed 200 OK in 54ms (Views: 36.5ms | ActiveRecord: 5.5ms | Allocations: 7706)
+
+
+Started GET "/deals/new" for ::1 at 2022-04-19 22:11:18 +0100
+Processing by DealsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:12:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 5.6ms | Allocations: 1334)
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/deals/new.html.erb:12:in `collect'
+  Rendered deals/new.html.erb within layouts/application (Duration: 21.1ms | Allocations: 4131)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 6875)
+Completed 200 OK in 85ms (Views: 32.8ms | ActiveRecord: 5.8ms | Allocations: 12109)
+
+
+Started POST "/deals" for ::1 at 2022-04-19 22:11:28 +0100
+Processing by DealsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deal"=>{"name"=>"Food Payment", "amount"=>"550", "category_id"=>"1"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:16:in `create'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/deals_controller.rb:20:in `block in create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:20:in `block in create'
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:20:in `block in create'
+  [1m[36mDeal Create (2.8ms)[0m  [1m[32mINSERT INTO "deals" ("name", "amount", "category_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Food Payment"], ["amount", 550], ["category_id", 1], ["author_id", 1], ["created_at", "2022-04-19 21:11:28.248831"], ["updated_at", "2022-04-19 21:11:28.248831"]]
+  ↳ app/controllers/deals_controller.rb:20:in `block in create'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/deals_controller.rb:20:in `block in create'
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 55ms (ActiveRecord: 10.4ms | Allocations: 9063)
+
+
+Started GET "/categories/1" for ::1 at 2022-04-19 22:11:28 +0100
+Processing by CategoriesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 4.1ms | Allocations: 1156)
+  [1m[36mDeal Load (2.1ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/models/deal.rb:10:in `sum_amounts'
+  Rendered shared/_card1.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered shared/_flash.html.erb (Duration: 0.9ms | Allocations: 321)
+  [1m[36mDeal Exists? (7.8ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" WHERE "deals"."category_id" = $1 LIMIT $2[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:7
+  [1m[36mCACHE Deal Load (0.0ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:10
+  Rendered shared/_card3.html.erb (Duration: 3.9ms | Allocations: 329)
+  Rendered categories/show.html.erb within layouts/application (Duration: 34.2ms | Allocations: 4976)
+  Rendered layout layouts/application.html.erb (Duration: 44.4ms | Allocations: 7549)
+Completed 200 OK in 56ms (Views: 36.6ms | ActiveRecord: 10.9ms | Allocations: 8471)
+
+
+Started GET "/deals/1" for ::1 at 2022-04-19 22:11:38 +0100
+Processing by DealsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeal Load (0.6ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deals_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering deals/show.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.0ms | Allocations: 694)
+  [1m[36mCategory Load (5.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/deals/show.html.erb:4
+  Rendered deals/show.html.erb within layouts/application (Duration: 21.4ms | Allocations: 2201)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 5028)
+Completed 200 OK in 45ms (Views: 29.0ms | ActiveRecord: 5.8ms | Allocations: 6651)
+
+
+Started GET "/" for ::1 at 2022-04-19 22:11:43 +0100
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 4.8ms | Allocations: 692)
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.5ms | Allocations: 118)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 25)
+  [1m[36mCategory Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered shared/_card1.html.erb (Duration: 0.1ms | Allocations: 16)
+  [1m[36mCategory Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:9
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:12
+  [1m[36mDeal Load (0.5ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/models/deal.rb:10:in `sum_amounts'
+  Rendered shared/_card2.html.erb (Duration: 5.6ms | Allocations: 836)
+  Rendered categories/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 3694)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 6253)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 4.3ms | Allocations: 6597)
+
+
+Started GET "/deals" for ::1 at 2022-04-19 22:11:48 +0100
+Processing by DealsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 8.2ms | Allocations: 1184)
+  [1m[36mDeal Load (0.9ms)[0m  [1m[34mSELECT "deals".* FROM "deals"[0m
+  ↳ app/models/deal.rb:10:in `sum_amounts'
+  Rendered shared/_card1.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 290)
+  [1m[36mDeal Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:6
+  [1m[36mCACHE Deal Load (0.0ms)[0m  [1m[34mSELECT "deals".* FROM "deals"[0m
+  ↳ app/views/deals/index.html.erb:9
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_card3.html.erb:5
+  Rendered shared/_card3.html.erb (Duration: 7.0ms | Allocations: 778)
+  Rendered deals/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 4625)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 7185)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 2.3ms | Allocations: 7585)
+
+
