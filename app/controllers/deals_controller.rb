@@ -13,7 +13,7 @@ class DealsController < ApplicationController
 
     respond_to do |format|
       if @deal.save
-        format.html { redirect_to deals_path, notice: 'Category was created successfully' }
+        format.html { redirect_to deals_path, notice: 'Transaction was created successfully' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end

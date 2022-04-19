@@ -1,13 +1,14 @@
 <%= render 'shared/header', title: 'TRANSACTIONS', image1: '', image3: 'back_arrow1.png', image2: 'search.png' %>
-<%= render 'shared/flash'%>
 <div class="card-1" >
-  <%= render 'shared/card1', type1: 'Total Transactions', type2: @deals.count %>
+
+  <%= render 'shared/card1', type1: 'Total Transactions', type2: Deal.sum_amounts %>
 </div>
+<%= render 'shared/flash'%>
 <% if @deals.empty? %>
   <p>No transactions added for this category</p>
 <% else %>
   <% @deals.each do |deal| %>
-    <%= render 'shared/card2', category: deal %>
+    <%= render 'shared/card3', deal: deal %>
   <% end %>
 <% end %>
 <div class='save-btn' >
