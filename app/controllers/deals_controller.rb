@@ -3,6 +3,10 @@ class DealsController < ApplicationController
     @deals = Deal.all
   end
 
+  def show
+    @deal = Deal.find(params[:id])
+  end
+
   def new
     @deal = Deal.new
     @categories = current_user.categories
