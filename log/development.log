@@ -1269,3 +1269,80 @@ Processing by CategoriesController#index as TURBO_STREAM
 Completed 200 OK in 34ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 6533)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-19 08:48:44 +0100
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 5.2ms | Allocations: 970)
+  Rendered categories/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1261)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 4160)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 5366)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 08:49:43 +0100
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 11.0ms | Allocations: 967)
+  Rendered categories/index.html.erb within layouts/application (Duration: 25.7ms | Allocations: 1262)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 4161)
+Completed 200 OK in 64ms (Views: 57.1ms | ActiveRecord: 0.0ms | Allocations: 5352)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 08:52:24 +0100
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.1ms | Allocations: 651)
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 732)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3210)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3574)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 08:55:54 +0100
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 111.5ms | Allocations: 34279)
+  Rendered categories/index.html.erb within layouts/application (Duration: 114.6ms | Allocations: 34579)
+  Rendered layout layouts/application.html.erb (Duration: 124.3ms | Allocations: 37478)
+Completed 200 OK in 133ms (Views: 131.3ms | ActiveRecord: 0.0ms | Allocations: 38645)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 08:57:02 +0100
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 6.7ms | Allocations: 2126)
+  Rendered categories/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2207)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4664)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 5023)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 08:57:09 +0100
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 3.0ms | Allocations: 652)
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 733)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3190)
+Completed 200 OK in 26ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 3533)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 09:00:23 +0100
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 76.7ms | Allocations: 30222)
+  Rendered categories/index.html.erb within layouts/application (Duration: 79.2ms | Allocations: 30526)
+  Rendered layout layouts/application.html.erb (Duration: 88.5ms | Allocations: 33447)
+Completed 200 OK in 102ms (Views: 99.1ms | ActiveRecord: 0.0ms | Allocations: 34615)
+
+
