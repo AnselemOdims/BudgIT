@@ -8557,3 +8557,61 @@ Processing by CategoriesController#index as TURBO_STREAM
 Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 2.4ms | Allocations: 5605)
 
 
+Started GET "/categories" for 127.0.0.1 at 2022-04-19 15:23:51 +0100
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered shared/_header.html.erb (Duration: 6.2ms | Allocations: 737)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 262)
+  [1m[36mCategory Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mCategory Load (2.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered shared/_card2.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered shared/_card2.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered categories/index.html.erb within layouts/application (Duration: 26.0ms | Allocations: 2556)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 5113)
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 3.4ms | Allocations: 5453)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-04-19 15:26:30 +0100
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_mobile_menu.html.erb (Duration: 4.6ms | Allocations: 296)
+  Rendered shared/_header.html.erb (Duration: 12.0ms | Allocations: 1423)
+  Rendered shared/_flash.html.erb (Duration: 4.1ms | Allocations: 546)
+  [1m[36mCategory Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered shared/_card1.html.erb (Duration: 5.4ms | Allocations: 145)
+  [1m[36mCategory Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:11
+  Rendered shared/_card2.html.erb (Duration: 3.4ms | Allocations: 229)
+  Rendered shared/_card2.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered categories/index.html.erb within layouts/application (Duration: 56.6ms | Allocations: 5299)
+  Rendered layout layouts/application.html.erb (Duration: 77.5ms | Allocations: 8161)
+Completed 200 OK in 88ms (Views: 82.4ms | ActiveRecord: 3.5ms | Allocations: 9318)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDeals (20220419143807)
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (39.9ms)[0m  [1m[35mCREATE TABLE "deals" ("id" bigserial primary key, "name" character varying, "amount" integer, "category_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_6b084cd147"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+, CONSTRAINT "fk_rails_f64a19bbd9"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE INDEX "index_deals_on_category_id" ON "deals" ("category_id")[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE INDEX "index_deals_on_user_id" ON "deals" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220419143807"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5380063897934428920)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
