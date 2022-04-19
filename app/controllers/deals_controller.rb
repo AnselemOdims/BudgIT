@@ -1,6 +1,9 @@
 class DealsController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource except: :create
+  
   def index
-    @deals = Deal.all
+    @deals = current_user.deals
   end
 
   def show

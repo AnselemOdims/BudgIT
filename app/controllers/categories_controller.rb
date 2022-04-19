@@ -1,6 +1,9 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource except: :create
+  
   def index
-    @categories = Category.includes(:deals).all
+    @categories = current_user.categories
   end
 
   def show
