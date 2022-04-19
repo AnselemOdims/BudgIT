@@ -1,17 +1,26 @@
 <div class="menu">
   <nav class="menu__nav">
+    <div class='profile'>
+      <div>
+        <%= image_tag 'https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31' %>
+      </div>
+      <p><%= user.full_name %></p>
+    </div>
     <ul class="menu__list r-list">
       <li class="menu__group">
-        <a href="#0" class="menu__link r-link">Home</a>
+        <%= link_to 'Home', authenticated_root_path, class: "menu__link r-link"%>
       </li>
       <li class="menu__group">
-        <a href="#0" class="menu__link r-link">About me</a>
+        <%= link_to 'Transactions', deals_path, class: "menu__link r-link"%>
       </li>
       <li class="menu__group">
-        <a href="#0" class="menu__link r-link">Services</a>
+        <%= link_to 'Categories', authenticated_root_path, class: "menu__link r-link"%>
       </li>
       </li>
     </ul>
+    <div class="profile profile-link">
+    <%= link_to 'Sign Out', destroy_user_session_path , method: :delete %>
+    </div>
   </nav>
   <button class="menu__toggle r-button" type="button">
     <span class="menu__hamburger m-hamburger">

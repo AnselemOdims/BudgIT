@@ -131,3 +131,30 @@
   top: 0;
   z-index: -1;
 }
+
+.profile {
+  position: relative;
+  top: 40px;
+  padding: 0.5rem 2rem;
+
+  div {
+    img {
+      width: 150px;
+      border-radius: 50%
+    }
+  }
+
+  p, a {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 30px
+  }
+
+  &.profile-link {
+    margin: 120px 0 0;
+
+    a {
+      color: $accent-color-2;
+    }
+  }
+}

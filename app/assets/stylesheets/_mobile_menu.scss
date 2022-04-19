@@ -142,7 +142,6 @@ MENU STYLES
   
   display: flex;
   flex-direction: column;
-  // align-items: center;  
 
   position: fixed;
   top: 26px;
@@ -160,6 +159,7 @@ MENU STYLES
 
   display: flex;
   z-index: 2;
+  flex-direction: column;
 }
 
 .menu__list{
@@ -245,7 +245,7 @@ MENU STATES
   transition-duration: .2s;
   transition-delay: .3s;
   position: relative;
-  top: 100px
+  top: 60px
 }
 
 .menu_activated .menu__toggle::before{
