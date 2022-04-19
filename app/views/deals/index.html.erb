@@ -1,7 +1,6 @@
-<%= render 'shared/header', title: 'TRANSACTIONS', image1: '', image3: 'back_arrow1.png', image2: 'search.png' %>
+<%= render 'shared/header', title: 'ALL TRANSACTIONS', image1: '', image3: 'back_arrow1.png', image2: 'search.png' %>
 <div class="card-1" >
-
-  <%= render 'shared/card1', type1: 'Total Transactions', type2: Deal.sum_amounts %>
+  <%= render 'shared/card1', type1: 'Total Transactions', type2: Deal.sum_amounts(@deals), type3: '$' %>
 </div>
 <%= render 'shared/flash'%>
 <% if @deals.empty? %>

@@ -5,9 +5,9 @@ class Deal < ApplicationRecord
   validates :name, presence: true
   validates :amount, presence: true
 
-  def self.sum_amounts
+  def self.sum_amounts(deals)
     sum = 0
-    Deal.all.each do |deal|
+    deals.all.each do |deal|
       sum += deal.amount
     end
     sum

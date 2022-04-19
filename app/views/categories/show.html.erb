@@ -1,0 +1,12 @@
+<%= render 'shared/header', title: 'SINGLE CATEGORY', image1: '', image3: 'back_arrow1.png', image2: 'search.png' %>
+<div class="card-1" >
+
+  <%= render 'shared/card1', type1: 'Total Transactions', type2: Deal.sum_amounts(@category.deals), type3: '$' %>
+</div>
+<%= render 'shared/flash'%>
+<% @category.deals.each do |deal| %>
+  <%= render 'shared/card3', deal: deal %>
+<% end %>
+<div class='save-btn' >
+  <%= link_to 'Add New Transaction', new_deal_path %>
+</div>

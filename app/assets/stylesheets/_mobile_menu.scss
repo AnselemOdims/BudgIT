@@ -147,6 +147,7 @@ MENU STYLES
   top: 26px;
   left: 10px;
   z-index: var(--menuZindex, 9998);
+  backdrop-filter: blur(5px);
 }
 
 .menu__nav{
@@ -283,7 +284,7 @@ SETTINGS
 :root{
   --colorWhite: #fff;
   --colorMain: #4557bb;
-  --menuCircleBackgroundColor: #3778c2;
+  --menuCircleBackgroundColor: #3778c2e8;
   --menuHamburgerBackgroundColor: var(--colorWhite);
   --menuHaburgerOutlineColor: var(--colorMain);
 }

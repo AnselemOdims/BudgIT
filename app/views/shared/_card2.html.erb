@@ -1,4 +1,4 @@
-<%= link_to deals_path(category)  do %>
+<%= link_to category_path(category)  do %>
   <div class="card-1 card-2">
     <div>
       <div>
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div>
-      <p>$150.00</p>
+      <p>$<%= Deal.sum_amounts(category.deals)%></p>
     </div>
   </div>
 <% end %>
