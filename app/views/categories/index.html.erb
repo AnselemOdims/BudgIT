@@ -1,2 +1,12 @@
-<%= render 'shared/header', title: 'CATEGORIES', image1: 'hamburger.png', image2: 'search.png' %>
-<p><%= link_to 'This is the categories page', new_category_path %></p>
+<%= render 'shared/header', title: 'CATEGORIES', image1: '', image2: 'search.png' %>
+<div class="holder">
+  <div class="cat-card" >
+  <%= render 'shared/card1', type1: 'Total Categories', type2: @categories.count %>
+  </div>
+</div>
+<%= render 'shared/card2' %>
+<%= render 'shared/card2' %>
+<%= render 'shared/card2' %>
+<div class='save-btn' >
+<%= link_to 'Add New Category', new_category_path %>
+</div>

@@ -1,0 +1,131 @@
+@import 'variables';
+@import 'mixins';
+
+.card-1 {
+  @include display(row, space-between, center);
+
+  background-color: #fff;
+  padding: 20px;
+  font-family: $font-1;
+  font-size: 20px;
+  box-shadow: $shadow-2;
+  border-radius: 4px;
+
+  p {
+    margin: 10px 0;
+  }
+}
+
+.card-2 {
+  @include display(row, space-between, initial);
+
+  margin: 20px 20px;
+  color: $neutral-color-1;
+
+  img {
+    width: 100px
+  }
+
+  > div:first-of-type {
+    @include display(row, unset, initial);
+
+    > div:last-of-type {
+      @include display(column, space-between, initial);
+
+      margin-left: 20px;
+
+      p {
+        margin-top: 20px
+      }
+    }
+  }
+
+  > div:last-of-type {
+    p {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.save-btn {
+  
+  @include button-1;
+  
+  margin: 20px 20px;
+  background: $accent-color-1;
+  text-align: center;
+  border-radius: 3px;
+
+  a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: $font-1;
+  }
+}
+
+.holder {
+  position: relative;
+}
+
+.cat-card {
+  border-radius: 5px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  height: 130px;
+  overflow: hidden;
+  position: relative;
+  margin: 20px;
+
+  &:before {
+    background: $primary-color-3;
+    backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  .card-text {
+    @include display(row, space-between, center);
+
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    font-family: $font-1;
+    margin: 0 20px;
+  }
+
+}
+
+.holder:before,
+.holder:after {
+  border-radius: 50%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  content: '';
+  height: 100px;
+  position: absolute;
+  width: 100px;
+  filter: blur(2px)
+}
+
+.holder:before {
+  background: #ffe897;
+  background: -moz-radial-gradient(top right, #ffe897, $accent-color-1);
+  background: radial-gradient(to bottom left, #ffe897, $accent-color-1);
+  background: -webkit-radial-gradient(top right, #ffe897, $accent-color-1);
+  top: 40px;
+  left: 10px
+}
+
+.holder:after {
+  background: #e0e793;
+  background: -moz-radial-gradient(bottom right, #e0e793, #6dd0f1);
+  background: radial-gradient(to top left, #e0e793, #6dd0f1);
+  background: -webkit-radial-gradient(bottom right, #e0e793, #6dd0f1);
+  right: 0;
+  top: 0;
+  z-index: -1;
+}

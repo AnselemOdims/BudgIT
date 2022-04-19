@@ -5,7 +5,7 @@ header {
   @include display(row, space-between, center);
 
   background: $primary-color-1;
-  padding: 10px;
+  padding: 20px;
 
   > div:nth-of-type(1) {
     > a {
