@@ -1346,3 +1346,172 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 102ms (Views: 99.1ms | ActiveRecord: 0.0ms | Allocations: 34615)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-19 09:10:20 +0100
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 6.9ms | Allocations: 1450)
+  Rendered categories/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1787)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 4692)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 5879)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:10:26 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 25.0ms | Allocations: 5945)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 8645)
+Completed 200 OK in 60ms (Views: 40.2ms | ActiveRecord: 7.8ms | Allocations: 12630)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:10:44 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 966)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4079)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 5304)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:10:50 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 966)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 4087)
+Completed 200 OK in 44ms (Views: 35.9ms | ActiveRecord: 0.0ms | Allocations: 5285)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:11:24 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 21.9ms | Allocations: 1456)
+  Rendered categories/new.html.erb within layouts/application (Duration: 35.9ms | Allocations: 2508)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 5397)
+Completed 200 OK in 74ms (Views: 67.9ms | ActiveRecord: 0.0ms | Allocations: 6593)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:14:11 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 14.7ms | Allocations: 1450)
+  Rendered categories/new.html.erb within layouts/application (Duration: 24.8ms | Allocations: 2513)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 5388)
+Completed 200 OK in 54ms (Views: 47.0ms | ActiveRecord: 0.0ms | Allocations: 6590)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:14:43 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 8.2ms | Allocations: 1450)
+  Rendered categories/new.html.erb within layouts/application (Duration: 12.9ms | Allocations: 2515)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 5416)
+Completed 200 OK in 48ms (Views: 39.9ms | ActiveRecord: 0.0ms | Allocations: 6612)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:14:56 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 12.7ms | Allocations: 1450)
+  Rendered categories/new.html.erb within layouts/application (Duration: 25.3ms | Allocations: 2521)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 5407)
+Completed 200 OK in 56ms (Views: 50.0ms | ActiveRecord: 0.0ms | Allocations: 6604)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:15:56 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 9.9ms | Allocations: 1453)
+  Rendered categories/new.html.erb within layouts/application (Duration: 27.0ms | Allocations: 2542)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 5431)
+Completed 200 OK in 66ms (Views: 55.9ms | Allocations: 6617)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:18:19 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 14.6ms | Allocations: 1450)
+  Rendered categories/new.html.erb within layouts/application (Duration: 27.6ms | Allocations: 2534)
+  Rendered layout layouts/application.html.erb (Duration: 151.9ms | Allocations: 15338)
+Completed 200 OK in 170ms (Views: 164.1ms | Allocations: 16524)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:19:39 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 15.4ms | Allocations: 1118)
+  Rendered categories/new.html.erb within layouts/application (Duration: 22.7ms | Allocations: 1696)
+  Rendered layout layouts/application.html.erb (Duration: 132.9ms | Allocations: 13234)
+Completed 200 OK in 140ms (Views: 136.9ms | Allocations: 13600)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:19:56 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 4.1ms | Allocations: 1121)
+  Rendered categories/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1705)
+  Rendered layout layouts/application.html.erb (Duration: 133.0ms | Allocations: 14193)
+Completed 200 OK in 137ms (Views: 135.9ms | Allocations: 14534)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:20:08 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 5.6ms | Allocations: 1119)
+  Rendered categories/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1712)
+  Rendered layout layouts/application.html.erb (Duration: 115.7ms | Allocations: 12777)
+Completed 200 OK in 120ms (Views: 118.9ms | Allocations: 13118)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:20:30 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 9.7ms | Allocations: 1453)
+  Rendered categories/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 2526)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 5420)
+Completed 200 OK in 41ms (Views: 36.3ms | Allocations: 6582)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:21:32 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 11.3ms | Allocations: 1458)
+  Rendered categories/new.html.erb within layouts/application (Duration: 20.5ms | Allocations: 2516)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 5413)
+Completed 200 OK in 49ms (Views: 46.9ms | Allocations: 6600)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 09:21:57 +0100
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 13.3ms | Allocations: 1456)
+  Rendered categories/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 1788)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 4707)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.0ms | Allocations: 5897)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-04-19 09:22:00 +0100
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 3.2ms | Allocations: 1120)
+  Rendered categories/new.html.erb within layouts/application (Duration: 13.9ms | Allocations: 2076)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 4523)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms | Allocations: 4949)
+
+

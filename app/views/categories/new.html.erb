@@ -1,0 +1,15 @@
+<%= render 'shared/header', title: 'NEW CATEGORY', image1: 'back_arrow1.png', image2: 'search.png' %>
+
+<div class="form-group">
+  <%= form_with model: @category, method: :post, local: true do |f| %>
+    <div class="field">
+      <%= f.text_field :name, required: true, placeholder: "Category Name" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :icon, required: true, placeholder: "Category Icon (please make sure that it is a valid image address)"%>
+    </div>  
+    <div class="actions">
+      <%= f.submit "Save" %>
+    </div>
+  <% end %>
+</div> 

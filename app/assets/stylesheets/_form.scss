@@ -19,6 +19,10 @@
         border-bottom: solid 1px rgb(230, 228, 228);
         font-family: $font-1;
         font-size: 20px;
+
+        &::placeholder{
+          font-size: 16px
+        }
       }
 
       textarea {
