@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 @import 'variables';
 @import 'mixins';
 
@@ -25,7 +26,7 @@
   color: $neutral-color-1;
 
   img {
-    width: 100px
+    width: 100px;
   }
 
   > div:first-of-type {
@@ -37,7 +38,7 @@
       margin-left: 20px;
 
       p {
-        margin-top: 20px
+        margin-top: 20px;
       }
     }
   }
@@ -48,13 +49,11 @@
       font-weight: bold;
     }
   }
-
 }
 
 .save-btn {
-  
   @include button-1;
-  
+
   margin: 20px 20px;
   background: $accent-color-1;
   text-align: center;
@@ -81,7 +80,7 @@
   position: relative;
   margin: 20px;
 
-  &:before {
+  &::before {
     background: $primary-color-3;
     backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
     content: '';
@@ -99,30 +98,30 @@
     font-family: $font-1;
     margin: 0 20px;
   }
-
 }
 
-.holder:before,
-.holder:after {
+.holder::before,
+.holder::after {
   border-radius: 50%;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   content: '';
   height: 100px;
   position: absolute;
   width: 100px;
-  filter: blur(2px)
+  filter: blur(2px);
 }
 
-.holder:before {
+.holder::before {
   background: #ffe897;
   background: -moz-radial-gradient(top right, #ffe897, $accent-color-1);
   background: radial-gradient(to bottom left, #ffe897, $accent-color-1);
   background: -webkit-radial-gradient(top right, #ffe897, $accent-color-1);
   top: 40px;
-  left: 10px
+  left: 10px;
 }
 
-.holder:after {
+/* stylelint-disable csstree/validator */
+.holder::after {
   background: #e0e793;
   background: -moz-radial-gradient(bottom right, #e0e793, #6dd0f1);
   background: radial-gradient(to top left, #e0e793, #6dd0f1);
@@ -140,14 +139,15 @@
   div {
     img {
       width: 150px;
-      border-radius: 50%
+      border-radius: 50%;
     }
   }
 
-  p, a {
+  p,
+  a {
     font-size: 1.5rem;
     color: #fff;
-    margin-bottom: 30px
+    margin-bottom: 30px;
   }
 
   &.profile-link {
@@ -170,7 +170,7 @@
     @include display(row, initial, center);
 
     img {
-      width: 80px
+      width: 80px;
     }
 
     p {
@@ -186,8 +186,7 @@
     }
   }
 
-  > div:nth-of-type(3){
-
+  > div:nth-of-type(3) {
     p {
       &:first-of-type {
         font-weight: 500;
@@ -196,18 +195,19 @@
 
       &:last-of-type {
         @include display(row, initial, center);
-    
-          color: $neutral-color-3
+
+        color: $neutral-color-3;
       }
     }
   }
 
   > div:nth-of-type(4) {
     @include display(row, space-between, center);
+
     font-size: 20px;
 
     p:last-of-type {
-      font-weight: bold
+      font-weight: bold;
     }
   }
 }

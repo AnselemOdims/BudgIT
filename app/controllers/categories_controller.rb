@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource except: :create
-  
+
   def index
     @categories = current_user.categories
   end

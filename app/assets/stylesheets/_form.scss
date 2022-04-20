@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 @import 'variables';
 @import 'mixins';
 
@@ -20,8 +21,8 @@
         font-family: $font-1;
         font-size: 20px;
 
-        &::placeholder{
-          font-size: 16px
+        &::placeholder {
+          font-size: 16px;
         }
       }
 
@@ -114,11 +115,11 @@
 
   > a {
     color: $primary-color-1;
-    font-size: 20px;  
+    font-size: 20px;
 
     &:first-of-type {
       text-decoration: underline;
-      font-weight: bold
+      font-weight: bold;
     }
 
     &:last-of-type {

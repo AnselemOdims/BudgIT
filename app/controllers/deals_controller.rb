@@ -1,7 +1,7 @@
 class DealsController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource except: :create
-  
+
   def index
     @deals = current_user.deals.order('created_at DESC')
   end
@@ -16,7 +16,7 @@ class DealsController < ApplicationController
   end
 
   def create
-    @deal= current_user.deals.new(deals_params)
+    @deal = current_user.deals.new(deals_params)
     @category = Category.find(deals_params['category_id'])
 
     respond_to do |format|

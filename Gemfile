@@ -73,10 +73,10 @@ group :test do
   gem 'capybara'
   gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
   gem 'ffi', '~> 1.15', '>= 1.15.5'
+  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'webdrivers'
-  gem 'rails-controller-testing'
 end
 
 gem 'devise'

@@ -1,25 +1,21 @@
-@import 'variables';
-@import 'mixins';
+/* stylelint-disable no-duplicate-selectors */
 
-.r-button{
+.r-button {
   --uirButtonBackgroundColor: var(--rButtonBackgroundColor, transparent);
   --uirButtonPadding: var(--rButtonPadding, var(--rButtonPaddingTop, 0) var(--rButtonPaddingRight, 0) var(--rButtonPaddingBottom, 0) var(--rButtonPaddingLeft, 0));
   --uirButtonBorderWidth: var(--rButtonBorderWidth, 0);
   --uirButtonBorderStyle: var(--rButtonBorderStyle, solid);
   --uirButtonBorderColor: var(--rButtonBorderColor, currentColor);
   --uirButtonFontFamily: var(--rButtonFontFamily, inherit);
-  --uirButtonFontSize: var(--rButtonFontSize,  inherit);
+  --uirButtonFontSize: var(--rButtonFontSize, inherit);
   --uirButtonColor: var(--rButtonColor);
 
   background-color: var(--uirButtonBackgroundColor);
   padding: var(--uirButtonPadding);
-
   border-width: var(--uirButtonBorderWidth);
   border-style: var(--uirButtonBorderStyle);
   border-color: var(--uirButtonBorderColor);
-
   cursor: pointer;
-
   font-family: var(--uirButtonFontFamily);
   font-size: var(--uirButtonFontSize);
 }
@@ -28,90 +24,86 @@
 .r-button[type="button"]::-moz-focus-inner,
 .r-button[type="reset"]::-moz-focus-inner,
 .r-button[type="submit"]::-moz-focus-inner {
-  
   /* Remove the inner border and padding in Firefox. */
-  
+
   border-style: none;
   padding: 0;
 }
 
 /* The component will reset browser's styles of link */
 
-.r-link{
-    --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
-    --uirLinkTextColor: var(--rLinkTextColor);
-    --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
+.r-link {
+  --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
+  --uirLinkTextColor: var(--rLinkTextColor);
+  --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
 
-    display: var(--uirLinkDisplay) !important;
-    color: var(--uirLinkTextColor) !important;
-    text-decoration: var(--uirLinkTextDecoration) !important;
+  display: var(--uirLinkDisplay) !important;
+  color: var(--uirLinkTextColor) !important;
+  text-decoration: var(--uirLinkTextDecoration) !important;
 }
 
 /* The component will reset browser's styles of list */
 
-.r-list{
-    --uirListPaddingLeft: var(--rListPaddingLeft, 0);
-    --uirListMarginTop: var(--rListMarginTop, 0);
-    --uirListMarginBottom: var(--rListMarginBottom, 0);
-    --uirListListStyle: var(--rListListStyle, none);
+.r-list {
+  --uirListPaddingLeft: var(--rListPaddingLeft, 0);
+  --uirListMarginTop: var(--rListMarginTop, 0);
+  --uirListMarginBottom: var(--rListMarginBottom, 0);
+  --uirListListStyle: var(--rListListStyle, none);
 
-    padding-left: var(--uirListPaddingLeft) !important;
-    margin-top: var(--uirListMarginTop) !important;
-    margin-bottom: var(--uirListMarginBottom) !important;
-    list-style: var(--uirListListStyle) !important;
+  padding-left: var(--uirListPaddingLeft) !important;
+  margin-top: var(--uirListMarginTop) !important;
+  margin-bottom: var(--uirListMarginBottom) !important;
+  list-style: var(--uirListListStyle) !important;
 }
 
 /* Basic styles of the hamburger component */
 
-.m-hamburger{  
+.m-hamburger {
   --uiHamburgerThickness: var(--hamburgerThickness, 4px);
 
   display: var(--hamburgerDisplay, inline-flex);
   width: var(--hamburgerWidth, 28px);
   height: var(--hamburgerHeight, 20px);
-
   position: relative;
 }
 
-.m-hamburger::before, 
-.m-hamburger::after, 
-.m-hamburger__label{
+.m-hamburger::before,
+.m-hamburger::after,
+.m-hamburger__label {
   width: 100%;
   height: var(--uiHamburgerThickness);
   border-radius: var(--hamburgerBorderRadius, 5px);
   background-color: var(--hamburgerBackgroundColor, currentColor);
-
   position: absolute;
   left: 0;
 }
 
-.m-hamburger::before, 
-.m-hamburger::after{
-  content:"";
+.m-hamburger::before,
+.m-hamburger::after {
+  content: "";
 }
 
-.m-hamburger::before{
+.m-hamburger::before {
   top: 0;
 }
 
-.m-hamburger::after{
+.m-hamburger::after {
   bottom: 0;
 }
 
-.m-hamburger__label{
+.m-hamburger__label {
   /* The calculation of middle hamburger button line position */
-  
+
   top: calc(50% - calc(var(--uiHamburgerThickness) / 2));
 }
 
 /* helper to hide elements that are available only for screen readers. */
 
-.screen-reader{
+.screen-reader {
   width: var(--screenReaderWidth, 1px) !important;
   height: var(--screenReaderHeight, 1px) !important;
   padding: var(--screenReaderPadding, 0) !important;
   border: var(--screenReaderBorder, none) !important;
-
   position: var(--screenReaderPosition, absolute) !important;
   clip: var(--screenReaderClip, rect(1px, 1px, 1px, 1px)) !important;
   overflow: var(--screenReaderOverflow, hidden) !important;
@@ -123,26 +115,21 @@ MENU STYLES
 =====
 */
 
-.menu{
+.menu {
   --uiMenuCircleSize: var(--menuCircleSize, 3rem);
   --uiMenuCircleOffset: var(--menuCircleOffset, 1rem);
-  --uiMenuCircleHeight: calc(var(--uiMenuCircleSize) / 2);  
+  --uiMenuCircleHeight: calc(var(--uiMenuCircleSize) / 2);
   --uiMenuCircleBackgroundColor: var(--menuCircleBackgroundColor, $primary-color-1);
-
   --uiMenuHamburgerWidth: var(--menuHamburgerWidth, 1.75rem);
   --uiMenuHamburgerHeight: var(--menuHamburgerHeight, 1.25rem);
-  
   --rButtonPaddingTop: calc(var(--uiMenuCircleHeight) - var(--uiMenuHamburgerHeight) - var(--uiMenuCircleOffset));
-  
   --hamburgerWidth: var(--uiMenuHamburgerWidth);
   --hamburgerHeight: var(--uiMenuHamburgerHeight);
   --hamburgerBackgroundColor: var(--menuHamburgerBackgroundColor, #fff);
 
   width: 100%;
-  
   display: flex;
   flex-direction: column;
-
   position: fixed;
   top: 26px;
   left: 10px;
@@ -150,77 +137,71 @@ MENU STYLES
   backdrop-filter: blur(5px);
 }
 
-.menu__nav{
+.menu__nav {
   box-sizing: border-box;
   width: 100%;
   height: 0;
-
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
   opacity: 0;
-
   display: flex;
   z-index: 2;
   flex-direction: column;
 }
 
-.menu__list{
+.menu__list {
   width: 100%;
   max-height: 100%;
-
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-.menu__toggle{
+.menu__toggle {
   box-sizing: border-box;
   width: var(--uiMenuCircleSize);
   height: var(--uiMenuCircleHeight);
   flex: 0.5;
-
   position: fixed;
-  left: 12px
+  left: 12px;
 }
 
-.menu__toggle::before{
+.menu__toggle::before {
   /*
   1. The font-size property is used to simplify calculations of the element's sizes and position
-  2. The negative value for the bottom property need for hiding half of circle. 
+  2. The negative value for the bottom property need for hiding half of circle.
   */
 
   content: "";
   width: 1em;
   height: 1em;
   font-size: var(--uiMenuCircleSize); /* 1 */
-
   background-color: var(--uiMenuCircleBackgroundColor);
   border-radius: 50%;
-
   position: absolute;
-  bottom: -.5em; /* 2 */
-  left: calc(50% - .5em);
+  bottom: -0.5em; /* 2 */
+  left: calc(50% - 0.5em);
   z-index: -1;
-
   will-change: width, height;
-  transition: transform .25s cubic-bezier(0.04, -0.1, 0.29, 0.98),
-              width .25s cubic-bezier(0.04, -0.1, 0.29, 0.98),
-              height .25s cubic-bezier(0.04, -0.1, 0.29, 0.98);
+  transition:
+    transform 0.25s cubic-bezier(0.04, -0.1, 0.29, 0.98),
+    width 0.25s cubic-bezier(0.04, -0.1, 0.29, 0.98),
+    height 0.25s cubic-bezier(0.04, -0.1, 0.29, 0.98);
 }
 
 /* styles of hamburger's animation */
 
-.m-hamburger::before, 
-.m-hamburger::after, 
-.m-hamburger__label{
+.m-hamburger::before,
+.m-hamburger::after,
+.m-hamburger__label {
   transition-timing-function: ease;
-  transition-duration: .15s;  
+  transition-duration: 0.15s;
 }
 
-.m-hamburger::before, 
-.m-hamburger::after{
+.m-hamburger::before,
+.m-hamburger::after {
   transition-property: transform;
 }
 
-.m-hamburger__label{
+.m-hamburger__label {
   transition-property: transform, opacity;
 }
 
@@ -230,48 +211,47 @@ MENU STATES
 =====
 */
 
-.menu__toggle:focus{
-  outline: none
+.menu__toggle:focus {
+  outline: none;
 }
 
-.menu_activated{
+.menu_activated {
   height: 100%;
 }
 
-.menu_activated .menu__nav{
+.menu_activated .menu__nav {
   flex-grow: 1;
   opacity: 1;
-
   will-change: opacity;
-  transition-duration: .2s;
-  transition-delay: .3s;
+  transition-duration: 0.2s;
+  transition-delay: 0.3s;
   position: relative;
-  top: 60px
+  top: 60px;
 }
 
-.menu_activated .menu__toggle::before{
+.menu_activated .menu__toggle::before {
   width: 100vmax;
   height: 100vmax;
   transform: translate3d(-50vh, -50vh, 0) scale(5);
   transition-duration: 1s;
 }
 
-.menu:not(.menu_activated) .menu__list{
+.menu:not(.menu_activated) .menu__list {
   display: none;
 }
 
-.menu_activated .m-hamburger::before{
+.menu_activated .m-hamburger::before {
   top: 50%;
   transform: translate3d(0, -50%, 0) rotate(45deg);
 }
 
-.menu_activated .m-hamburger::after{
+.menu_activated .m-hamburger::after {
   transform: translate3d(0, -50%, 0) rotate(135deg);
   top: 50%;
 }
 
-.menu_activated .m-hamburger__label{
-  transform: rotate(-45deg) translate3d(-.285em,-.3em, 0);
+.menu_activated .m-hamburger__label {
+  transform: rotate(-45deg) translate3d(-0.285em, -0.3em, 0);
   opacity: 0;
 }
 
@@ -281,7 +261,7 @@ SETTINGS
 =====
 */
 
-:root{
+:root {
   --colorWhite: #fff;
   --colorMain: #4557bb;
   --menuCircleBackgroundColor: #3778c2e8;
@@ -289,7 +269,7 @@ SETTINGS
   --menuHaburgerOutlineColor: var(--colorMain);
 }
 
-.menu_activated{
+.menu_activated {
   --menuHaburgerOutlineColor: var(--colorWhite);
 }
 
@@ -299,65 +279,64 @@ DEMO
 =====
 */
 
-body{
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;  
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
   font-size: 1rem;
 }
 
-.page{
+.page {
   max-width: 380px;
   padding: 1rem;
-  margin: auto;  
+  margin: auto;
   text-align: center;
 }
 
-.page__name{
+.page__name {
   display: block;
   font-size: 2rem;
   font-weight: 700;
 }
 
-.page__hint{
+.page__hint {
   display: block;
   line-height: 1.45;
   margin-top: 1rem;
 }
 
-.menu__group{
+.menu__group {
   --rLinkTextColor: var(--colorWhite);
 
-  padding: .5rem 2rem; 
+  padding: 0.5rem 2rem;
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
 
   &:first-of-type {
-    padding-top: 3rem
+    padding-top: 3rem;
   }
 }
 
-.linktr{
+.linktr {
   order: -1;
   padding: 1.75rem;
   text-align: center;
 }
 
-.linktr__goal{
+.linktr__goal {
   background-color: rgb(209, 246, 255);
   color: rgb(8, 49, 112);
   border-radius: 2rem;
-  padding: .5rem 1.25rem;
+  padding: 0.5rem 1.25rem;
 }
 
-@media (min-width: 1024px){
-  
-  .linktr{
-    position: absolute; 
-    right: 1rem; 
+@media (min-width: 1024px) {
+  .linktr {
+    position: absolute;
+    right: 1rem;
     bottom: 1rem;
   }
 }
