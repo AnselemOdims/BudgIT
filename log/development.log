@@ -16914,3 +16914,64 @@ Processing by CategoriesController#show as HTML
 Completed 200 OK in 115ms (Views: 38.7ms | ActiveRecord: 21.6ms | Allocations: 12897)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-20 10:41:09 +0100
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.0ms | Allocations: 694)
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.5ms | Allocations: 117)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 25)
+  [1m[36mCategory Count (4.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories" WHERE "categories"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/categories/index.html.erb:6
+  Rendered shared/_card1.html.erb (Duration: 0.2ms | Allocations: 16)
+  [1m[36mCategory Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."author_id" = $1 LIMIT $2[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:9
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/categories/index.html.erb:12
+  [1m[36mDeal Load (1.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/models/deal.rb:10:in `sum_amounts'
+  Rendered shared/_card2.html.erb (Duration: 8.6ms | Allocations: 851)
+  [1m[36mDeal Load (0.5ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/models/deal.rb:10:in `sum_amounts'
+  Rendered shared/_card2.html.erb (Duration: 4.3ms | Allocations: 811)
+  [1m[36mDeal Load (3.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/models/deal.rb:10:in `sum_amounts'
+  Rendered shared/_card2.html.erb (Duration: 8.1ms | Allocations: 848)
+  Rendered categories/index.html.erb within layouts/application (Duration: 40.9ms | Allocations: 5761)
+  Rendered layout layouts/application.html.erb (Duration: 53.0ms | Allocations: 8315)
+Completed 200 OK in 59ms (Views: 44.2ms | ActiveRecord: 10.0ms | Allocations: 9181)
+
+
+Started GET "/deals" for 127.0.0.1 at 2022-04-20 10:41:13 +0100
+Processing by DealsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering deals/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 3.0ms | Allocations: 694)
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.6ms | Allocations: 117)
+  [1m[36mDeal Load (1.0ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."author_id" = $1 ORDER BY created_at DESC[0m  [["author_id", 1]]
+  ↳ app/models/deal.rb:10:in `sum_amounts'
+  Rendered shared/_card1.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 25)
+  [1m[36mDeal Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "deals" WHERE "deals"."author_id" = $1 LIMIT $2[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/deals/index.html.erb:7
+  [1m[36mCACHE Deal Load (0.0ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE "deals"."author_id" = $1 ORDER BY created_at DESC[0m  [["author_id", 1]]
+  ↳ app/views/deals/index.html.erb:10
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_card3.html.erb:5
+  Rendered shared/_card3.html.erb (Duration: 6.7ms | Allocations: 773)
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_card3.html.erb:5
+  Rendered shared/_card3.html.erb (Duration: 6.5ms | Allocations: 774)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_card3.html.erb:5
+  Rendered shared/_card3.html.erb (Duration: 4.4ms | Allocations: 701)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_card3.html.erb:5
+  Rendered shared/_card3.html.erb (Duration: 3.6ms | Allocations: 702)
+  Rendered deals/index.html.erb within layouts/application (Duration: 42.6ms | Allocations: 6063)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 8616)
+Completed 200 OK in 67ms (Views: 51.1ms | ActiveRecord: 3.2ms | Allocations: 10948)
+
+
