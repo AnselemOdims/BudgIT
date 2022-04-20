@@ -1,0 +1,16 @@
+<%= link_to deal_path(deal)  do %>
+  <div class="card-1 card-2">
+    <div>
+      <div>
+        <%= image_tag deal.category.icon %>
+      </div>
+      <div>
+        <p><%= deal.name %></p>
+        <small><%= deal.created_at %></small>
+      </div>
+    </div>
+    <div>
+      <p>$<%= deal.amount %></p>
+    </div>
+  </div>
+<% end %>

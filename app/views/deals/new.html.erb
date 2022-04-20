@@ -1,0 +1,18 @@
+<%= render 'shared/header', title: 'NEW TRANSACTION', image1: 'back_arrow1.png', image2: 'search.png', image3: '' %>
+
+<div class="form-group">
+  <%= form_with model: @deal, method: :post, local: true do |f| %>
+    <div class="field">
+      <%= f.text_field :name, required: true, placeholder: "Transaction Name" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :amount, required: true, placeholder: "Transaction Amount"%>
+    </div>
+    <div class="field">
+      <%= f.select :category_id, @categories.collect { |category| [category.name, category.id] }, { :prompt => 'Select Category'}, class: "form-select", required: true %>
+    </div>  
+    <div class="actions">
+      <%= f.submit "Save" %>
+    </div>
+  <% end %>
+</div> 

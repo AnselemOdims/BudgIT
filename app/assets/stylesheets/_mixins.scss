@@ -1,0 +1,45 @@
+@mixin position($position, $top, $bottom, $left, $right) {
+  position: $position;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+@mixin dimension($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin display-grid($column, $gap) {
+  display: grid;
+  grid-template-columns: $column;
+  gap: $gap;
+}
+
+@mixin display($direction, $justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin responsive($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin max-responsive($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin button-1 {
+  padding: 25px 10px;
+  background: $primary-color-1;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}

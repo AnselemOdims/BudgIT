@@ -1,0 +1,16 @@
+<%= render 'shared/header', title: 'ALL TRANSACTIONS', image1: '', image3: '', image2: 'search.png' %>
+<%= render 'shared/mobile_menu', user: current_user %>
+<div class="card-1" >
+  <%= render 'shared/card1', type1: 'Total Transactions', type2: Deal.sum_amounts(@deals), type3: '$' %>
+</div>
+<%= render 'shared/flash'%>
+<% if @deals.empty? %>
+  <p class='empty'>No transactions added for this category</p>
+<% else %>
+  <% @deals.each do |deal| %>
+    <%= render 'shared/card3', deal: deal %>
+  <% end %>
+<% end %>
+<div class='save-btn' >
+<%= link_to 'Add New Transaction', new_deal_path %>
+</div>
