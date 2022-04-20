@@ -8,8 +8,10 @@
 - SASS
 - git
 
+## Presentation Link
+[Presentation Link](https://www.loom.com/share/2fb613e024dc45c891b084f741a3c47e)
 ## Live Version
-[Live version](https://thawing-castle-09878.herokuapp.com/)
+[Live demo](https://thawing-castle-09878.herokuapp.com/)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
