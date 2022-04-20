@@ -3,7 +3,7 @@ class Deal < ApplicationRecord
   belongs_to :category
 
   validates :name, presence: true
-  validates :amount, presence: true
+  validates :amount, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def self.sum_amounts(deals)
     sum = 0
