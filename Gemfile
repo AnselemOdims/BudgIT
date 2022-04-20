@@ -58,7 +58,6 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'database_cleaner'
   gem 'factory_bot_rails'
-  gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'web-console'
 
@@ -77,6 +76,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'webdrivers'
+  gem 'rails-controller-testing'
 end
 
 gem 'devise'
