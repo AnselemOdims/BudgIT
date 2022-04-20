@@ -5,12 +5,14 @@ Rails.application.routes.draw do
     # Defines the root path route ("/")
     devise_scope :user do
       authenticated :user do
-        root :to => "foods#index", as: :authenticated_root
+        root :to => "categories#index", as: :authenticated_root
         get '/users/sign_out' => 'devise/sessions#destroy'
       end
       unauthenticated :user do
-        root :to => "devise/sessions#new", as: :unauthenticated_root
+        root :to => "splashs#index", as: :unauthenticated_root
       end
     end
-    get '/splash' => 'splashs#index'
+
+    resources :categories, only: [:index, :show, :new, :create]
+    resources :deals, only: [:index, :show, :new, :create]
 end

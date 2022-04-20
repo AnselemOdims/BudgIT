@@ -1,0 +1,20 @@
+<%= render 'shared/header', title: 'DETAILS', image1: '', image3: 'back_arrow1.png', image2: '' %>
+<section class="details-card">
+  <div>
+    <%= image_tag @deal.category.icon %>
+    <p><%= @deal.name %><p>
+  </div>
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <hr>
+  <div>
+    <p>Transaction N<small>&#176;</small>3412000032</p>
+    <p><%= image_tag 'calendar.png' %><%= @deal.created_at %></p>
+  </div>
+  <hr>
+  <div>
+    <p>TOTAL PAYMENT</p>
+    <p>$<%= @deal.amount %></p>
+  </div>
+</section>

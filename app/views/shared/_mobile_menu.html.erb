@@ -1,0 +1,87 @@
+<div class="menu">
+  <nav class="menu__nav">
+    <div class='profile'>
+      <div>
+        <%= image_tag 'https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31' %>
+      </div>
+      <p><%= user.full_name %></p>
+    </div>
+    <ul class="menu__list r-list">
+      <li class="menu__group">
+        <%= link_to 'Home', authenticated_root_path, class: "menu__link r-link"%>
+      </li>
+      <li class="menu__group">
+        <%= link_to 'Transactions', deals_path, class: "menu__link r-link"%>
+      </li>
+      <li class="menu__group">
+        <%= link_to 'Categories', authenticated_root_path, class: "menu__link r-link"%>
+      </li>
+      </li>
+    </ul>
+    <div class="profile profile-link">
+    <%= link_to 'Sign Out', destroy_user_session_path , method: :delete %>
+    </div>
+  </nav>
+  <button class="menu__toggle r-button" type="button">
+    <span class="menu__hamburger m-hamburger">
+      <span class="m-hamburger__label">
+        <span class="menu__toggle-hint screen-reader">Open menu</span>
+      </span>
+    </span>
+  </button>
+</div>
+
+
+<script>
+(function(){
+  'use strict';
+
+  class Menu {
+    constructor(settings) {
+      this.menuRootNode = settings.menuRootNode;
+      this.isOpened = false;
+    }
+    
+    changeMenuState(menuState) {
+      return this.isOpened = !menuState;
+    }
+    
+    changeToggleHint(toggleHint, toggleNode) {
+      toggleNode.textContent = toggleHint;
+      return toggleHint; 
+    }
+  }
+
+  const menuClassesNames = {
+    rootClass: 'menu',
+    activeClass: 'menu_activated',
+    toggleClass: 'menu__toggle',
+    toggleHintClass: 'menu__toggle-hint'
+  }
+  
+  const jsMenuNode = document.querySelector(`.${menuClassesNames.rootClass}`);
+  const demoMenu = new Menu ({
+    menuRootNode: jsMenuNode
+  });
+  
+  function getCurrentToggleHint(currentMenuState) {
+    return (currentMenuState !== true) ? 'Open menu' : 'Close menu';
+  }
+  
+  function toggleMenu(event) {
+    
+      let currentMenuState = demoMenu.changeMenuState(demoMenu.isOpened);
+      let toggleHint = getCurrentToggleHint(currentMenuState);
+      
+      demoMenu.changeToggleHint(
+        toggleHint, 
+        demoMenu.menuRootNode.querySelector(`.${menuClassesNames.toggleHintClass}`)
+      );
+      demoMenu.menuRootNode.classList.toggle(`${menuClassesNames.activeClass}`);
+      
+      return currentMenuState;  
+  }
+  
+  jsMenuNode.querySelector(`.${menuClassesNames.toggleClass}`).addEventListener('click', toggleMenu);
+})();
+</script>

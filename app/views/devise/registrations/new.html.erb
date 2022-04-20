@@ -1,27 +1,28 @@
-<h2>Sign up</h2>
+<%= render 'shared/header', title: 'REGISTER', image1: 'back_arrow1.png', image2: '', image3: ''  %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="form-group">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.text_field :full_name, autofocus: true, placeholder: "Full name" %>
+    </div>
 
-  <div class="field">
-    <%= f.text_field :full_name, autofocus: true, placeholder: "Full name" %>
-  </div>
+    <div class="field">
+      <%= f.email_field :email, autocomplete: "email", placeholder: "Email" %>
+    </div>
 
-  <div class="field">
-    <%= f.email_field :email, autocomplete: "email", placeholder: "Email" %>
-  </div>
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+    </div>
 
-  <div class="field">
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
-  </div>
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password Confirmation" %>
+    </div>
 
-  <div class="field">
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password Confirmation" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    <div class="actions">
+      <%= f.submit "SIGN UP" %>
+    </div>
+    <div class="extras">
+        <%= render "devise/shared/links" %>
+    </div> 
+  <% end %>
+</div>

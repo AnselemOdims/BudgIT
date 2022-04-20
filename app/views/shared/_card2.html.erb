@@ -1,0 +1,16 @@
+<%= link_to category_path(category)  do %>
+  <div class="card-1 card-2">
+    <div>
+      <div>
+        <%= image_tag category.icon %>
+      </div>
+      <div>
+        <p><%= category.name %></p>
+        <small><%= category.created_at %></small>
+      </div>
+    </div>
+    <div>
+      <p>$<%= Deal.sum_amounts(category.deals)%></p>
+    </div>
+  </div>
+<% end %>
