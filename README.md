@@ -8,6 +8,8 @@
 - SASS
 - git
 
+## Live Version
+[Live version](https://thawing-castle-09878.herokuapp.com/)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -69,9 +71,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Credit to [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) the author of the [original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 
 ## 📝 License
 
