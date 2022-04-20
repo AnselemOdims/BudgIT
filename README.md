@@ -1,24 +1,78 @@
-# README
+# BudgIT
+>  BudgIT is a mobile-web app that takes a record of categories and the transactions carried out on a category. User can create transactions on each of the category or can create a category themselves. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built With
 
-Things you may want to cover:
+- Ruby
+- Ruby on Rails
+- SASS
+- git
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+To get a local copy up and running follow these simple example steps.
 
-* Configuration
+Clone the project by using terminal:
 
-* Database creation
+```
+git clone git@github.com:AnselemOdims/BudgIT.git
 
-* Database initialization
+```
+```
+cd BudgIT
 
-* How to run the test suite
+```
+and then run the following command
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bundle install
+```
 
-* Deployment instructions
+### Development
 
-* ...
+- Create database and run migrations using 
+```
+  bin/rails db:setup
+```
+- Start the server using 
+```
+  bin/rails s
+```
+
+- To run test 
+  `rspec spec`
+
+### Prerequisites
+
+- Ruby
+- Rails
+
+Rspec gem for testing enviroment
+
+## Author
+
+👤 **ANSELEM ODIMEGWU**
+
+- GitHub: [@AnselemOdims](https://github.com/AnselemOdims)
+- LinkedIn: [Anselem Odimegwu](https://www.linkedin.com/in/anselem-odimegwu/)
+- Email: anselemcloud@gmail.com
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/AnselemOdims/fitness_blog/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
