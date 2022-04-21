@@ -2,7 +2,6 @@
 >  BudgIT is a mobile-web app that takes a record of categories and the transactions carried out on a category. User can create transactions on each of the category or can create a category themselves. 
 
 ## Built With
-
 - Ruby
 - Ruby on Rails
 - SASS
@@ -10,6 +9,11 @@
 
 ## Presentation Link
 [Presentation Link](https://www.loom.com/share/2fb613e024dc45c891b084f741a3c47e)
+
+## Mini Demo 
+![budgit](https://user-images.githubusercontent.com/43995830/164492108-6a8bd0cf-00c4-4b7c-be6c-b57fa32e5af1.gif)
+
+
 ## Live Version
 [Live demo](https://thawing-castle-09878.herokuapp.com/)
 ## Getting Started
